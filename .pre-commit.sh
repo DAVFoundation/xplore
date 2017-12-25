@@ -17,3 +17,6 @@ if ! $PASS; then
   echo "\033[41mCOMMIT FAILED:\033[0m Your commit contains files that should pass ESLint but do not. Please fix the ESLint errors and try again.\n"
   exit 1
 fi
+
+npm run build
+git add dist
