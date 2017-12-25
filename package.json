@@ -1,0 +1,15 @@
+{
+  "name": "bloxplorer",
+  "version": "0.0.1",
+  "description": "A block explorer for local Ethereum testnets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tal Ater <tal@talater.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DAVFoundation/bloxplorer.git"
+  },
+  "license": "MIT"
+}
