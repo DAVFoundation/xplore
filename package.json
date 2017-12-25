@@ -1,5 +1,5 @@
 {
-  "name": "bloxplorer",
+  "name": "xplore",
   "version": "0.0.1",
   "description": "A block explorer for local Ethereum testnets",
   "license": "MIT",
@@ -7,7 +7,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DAVFoundation/bloxplorer.git"
+    "url": "git+https://github.com/DAVFoundation/xplore.git"
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
