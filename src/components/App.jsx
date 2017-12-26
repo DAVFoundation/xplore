@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import store from '../store';
 import BlocksContainer from '../containers/BlocksContainer.jsx';
+import AccountsContainer from '../containers/AccountsContainer.jsx';
 import { getBlocks, getAccounts } from '../actions';
 
 class App extends Component {
@@ -11,7 +12,12 @@ class App extends Component {
   }
 
   render() {
-    return <BlocksContainer />;
+    return (
+      <div>
+        <BlocksContainer />
+        <AccountsContainer />
+      </div>
+    );
   }
 }
 
