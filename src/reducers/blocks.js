@@ -1,5 +1,13 @@
 import { handleActions } from 'redux-actions';
+import { getBlocksFulfilled } from '../actions';
 
-const defaultState = [{ id: 3, transactions: 4 }, { id: 2, transactions: 3 }, { id: 1, transactions: 1 }];
+const defaultState = [];
 
-export default handleActions({}, defaultState);
+export default handleActions(
+  {
+    [getBlocksFulfilled]: (state, { payload }) => {
+      return payload;
+    },
+  },
+  defaultState,
+);
