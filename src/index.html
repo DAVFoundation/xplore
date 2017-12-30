@@ -4,8 +4,614 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no, shrink-to-fit=no">
   <title>Xplore</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,500,700|Roboto:300,400,500,700" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="styles/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+  	<div class="container xplorer">
+    	<div class="row">
+			<div class="col-sm-6">
+				<a href="#" class="logo"><img src="images/logo.png"></a>
+			</div>
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-xs-9">
+						<input type="text" name="search" placeholder="Search by Tx Hash / Block # / Address" />
+					</div>
+					<div class="col-xs-3">
+						<input type="submit" value="SEARCH" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h1>DAV Block Explorer</h1>
+
+		<div class="gray-block">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="last-block">
+						<div class="row">
+							<div class="col-xs-8">
+								<h4>Last block</h4>
+								<h3>21</h3>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/last-block.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="rpc-server">
+						<div class="row">
+							<div class="col-xs-8">
+								<h4>Last block</h4>
+								<h3>http://localhost:8545</h3>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/rpc-server.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="transactions">
+						<div class="row">
+							<div class="col-xs-8">
+								<h4>Transactions</h4>
+								<h3>48</h3>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/transactions.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="mining-status">
+						<div class="row">
+							<div class="col-xs-8">
+								<h4>Mining status</h4>
+								<h3>Automining</h3>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/mining-status.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<h3 class="block-title">Block</h3>
+					<div class="white-container">
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="header-custom">Block #</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p class="header-custom">Transactions</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p class="header-custom">Time</p>
+							</div>
+						</div>
+						<div class="header-separator"></div>
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">45</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>2</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:11</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">44</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:11</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">43</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:10</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">42</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:09</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">41</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:07</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">40</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>3</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:06</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">39</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:06</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">38</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:02</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">37</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>1</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:21:10</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="block-number">36</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p>4</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:21:10</p>
+							</div>
+						</div>
+
+					</div><!-- end white container -->
+				</div>
+				<div class="col-sm-6">
+					<h3 class="block-title">Accounts</h3>
+					<div class="white-container">
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="header-custom">Address</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p class="header-custom">Balance</p>
+							</div>
+						</div>
+
+						<div class="header-separator"></div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x627306090abaB3A6e1400e9345bC60c78a8BEf57</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>10.20</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0xa090abc78a8BEf57B3A6e1400e9345bC60627306</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>7.20</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x345bC60627306090abc700e9f578a8BEaB3A6e14</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>0</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x627306090abaB3A6e1400e9345bC60c78a8BEf57</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>8.15</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0xa090abc78a8BEf57B3A6e1400e9345bC60627306</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>3.95</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x345bC60627306090abc700e9f578a8BEaB3A6e14</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>0</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x627306090abaB3A6e1400e9345bC60c78a8BEf57</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>13.1</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0xa090abc78a8BEf57B3A6e1400e9345bC60627306</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>5.66</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x345bC60627306090abc700e9f578a8BEaB3A6e14</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>0</span> ETH</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-6 text-left">
+								<p class="address-number">0x627306090abaB3A6e1400e9345bC60c78a8BEf57</p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<p><span>4.20</span> ETH</p>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row transactions-history">
+				<div class="col-sm-6">
+					<h3 class="block-title">Transactions</h3>
+					<div class="row">
+						<div class="col-sm-1"><span class="green-circle"></span></div>
+						<div class="col-sm-11">
+							<div class="white-container transact">
+								<h4>Transaction: 3</h4>
+								<div class="header-separator"></div>
+								<p>Hash: <span>0x97C74B7D672EF68189B09C4CACA6C6BEDC5...</span></p>
+								<p>From: <span>0xD4C5EB83EF68189B09C4CAA50D22BFF9340...</span></p>
+								<p>To: <span>0xD672EAA5340DCA6C6BE0D22BFFDC597C74B79...</span></p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-sm-1"><span class="green-circle"></span></div>
+						<div class="col-sm-11">
+							<div class="white-container transact">
+								<h4>Transaction: 3</h4>
+								<div class="header-separator"></div>
+								<p>Hash: <span>0x97C74B7D672EF68189B09C4CACA6C6BEDC5...</span></p>
+								<p>From: <span>0xD4C5EB83EF68189B09C4CAA50D22BFF9340...</span></p>
+								<p>To: <span>0xD672EAA5340DCA6C6BE0D22BFFDC597C74B79...</span></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-1"><span class="green-circle"></span></div>
+						<div class="col-sm-11">
+							<div class="white-container transact">
+								<h4>Transaction: 3</h4>
+								<div class="header-separator"></div>
+								<p>Hash: <span>0x97C74B7D672EF68189B09C4CACA6C6BEDC5...</span></p>
+								<p>From: <span>0xD4C5EB83EF68189B09C4CAA50D22BFF9340...</span></p>
+								<p>To: <span>0xD672EAA5340DCA6C6BE0D22BFFDC597C74B79...</span></p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-6">
+					<h3 class="block-title">Events</h3>
+					<div class="white-container">
+						<div class="row">
+							<div class="col-xs-4 text-left">
+								<p class="header-custom">Name</p>
+							</div>
+							<div class="col-xs-4 text-center">
+								<p class="header-custom">Data</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p class="header-custom">Time</p>
+							</div>
+						</div>
+
+						<div class="header-separator"></div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xa090abc78a8BEf57B3A6e1400e9345bC60</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-2 text-left">
+								<p>newIdenti</p>
+							</div>
+							<div class="col-xs-6 text-center">
+								<p class="blue">0xe1400e9345bC6062730a090abc78a8BEf5</p>
+							</div>
+							<div class="col-xs-4 text-right">
+								<p>14:22:0</p>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+  </div>
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </body>
 </html>
