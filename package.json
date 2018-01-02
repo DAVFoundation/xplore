@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/DAVFoundation/xplore.git"
   },
+  "homepage": "https://github.com/DAVFoundation/xplore#readme",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
