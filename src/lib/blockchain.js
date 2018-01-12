@@ -21,3 +21,30 @@ export const getBlocks = () => {
     })
     .then(blocks => Promise.resolve(blocks));
 };
+
+export const getLatestBlock = () => {
+  return web3.eth
+    .getBlockNumber()
+    .then(latestBlock => {
+      console.log(latestBlock);
+      return latestBlock;
+    });
+};
+
+export const getTransactionCount = (block) => {
+  return web3.eth
+    .getBlockTransactionCount(block)
+    .then(count => {
+      console.log(count);
+      return count;
+    });
+};
+
+export const getMiningStatus = () => {
+  return web3.eth
+    .isMining()
+    .then(status=>{
+      console.log(status);
+      return status;
+    });
+};
