@@ -23,7 +23,7 @@ export const getBlocks = () => {
 };
 
 export const getLatestBlock = () => {
-  return web3.eth
+  web3.eth
     .getBlockNumber()
     .then(latestBlock => {
       console.log(latestBlock);
@@ -32,7 +32,7 @@ export const getLatestBlock = () => {
 };
 
 export const getTransactionCount = (block) => {
-  return web3.eth
+  web3.eth
     .getBlockTransactionCount(block)
     .then(count => {
       console.log(count);
@@ -41,10 +41,38 @@ export const getTransactionCount = (block) => {
 };
 
 export const getMiningStatus = () => {
-  return web3.eth
+  web3.eth
     .isMining()
     .then(status=>{
       console.log(status);
       return status;
     });
+};
+
+export const search = (query) => {
+  let type = 'tx';
+  if(!isNaN(query)){
+    type = 'block';
+  }else if(web3.utils.isAddress(query)){
+    type = 'address';
+  }
+
+  switch(type){
+  case 'tx':
+    web3.eth
+      .getTransaction(query)
+      .then(tx=>{
+        console.log(tx);
+      });
+    break;
+  case 'block':
+    web3.eth
+      .getBlock(parseInt(query))
+      .then(block => {
+        console.log(block);
+      });
+    break;
+  case 'address':
+    break;
+  }
 };
