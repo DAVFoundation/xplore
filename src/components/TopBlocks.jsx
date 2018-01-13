@@ -9,11 +9,11 @@ class TopBlocks extends Component {
   render(){
 
     var topList = this.props.blockList.map((block, index) => {
-      return (<BlockItem key={index} action={bounty.action} title={bounty.title} classId={bounty.class} icon={bounty.icon}/>)
+      return (<BlockItem key={index} action={block.action} title={block.title} classId={block.class} icon={block.icon}/>);
     });
     return(
-      <div>
-
+      <div className="row">
+        {topList}
       </div>
     );
   }
@@ -31,9 +31,9 @@ class BlockItem extends Component {
   render(){
     return(
       <div lassName="col-sm-3">
-        <div className={classId}>
-          <h4>{title}</h4>
-          <h3>{icon}</h3>
+        <div className={this.props.classId}>
+          <h4>{this.props.title}</h4>
+          <h3>{this.props.icon}</h3>
         </div>
       </div>
     );
