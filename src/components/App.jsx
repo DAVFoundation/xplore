@@ -3,6 +3,7 @@ import store from '../store';
 import BlocksContainer from '../containers/BlocksContainer.jsx';
 import AccountsContainer from '../containers/AccountsContainer.jsx';
 import { getBlocks, getAccounts } from '../actions';
+import './static/css/style.css';
 
 class App extends Component {
 
@@ -14,7 +15,6 @@ class App extends Component {
   render() {
     return (
       <div class="container xplorer">
-        <div class="row"
         <BlocksContainer />
         <AccountsContainer />
       </div>
