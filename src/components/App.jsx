@@ -13,7 +13,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div class="container xplorer">
+        <div class="row"
         <BlocksContainer />
         <AccountsContainer />
       </div>
