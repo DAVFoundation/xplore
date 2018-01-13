@@ -30,7 +30,7 @@ class BlockItem extends Component {
 
   render(){
     return(
-      <div lassName="col-sm-3">
+      <div className="col-sm-3">
         <div className={this.props.classId}>
           <h4>{this.props.title}</h4>
           <h3>{this.props.icon}</h3>
