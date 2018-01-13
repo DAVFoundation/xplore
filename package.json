@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.8",
     "eslint": "^4.14.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.5.1",
@@ -37,9 +38,13 @@
     "redux-actions": "^2.2.1",
     "redux-devtools-extension": "^2.13.2",
     "redux-promise-middleware": "^5.0.0",
+    "style-loader": "^0.19.1",
     "web3": "^1.0.0-beta.27",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "redux-form": "^7.1.0"
   }
 }
