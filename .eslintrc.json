@@ -25,14 +25,15 @@
       "unix"
     ],
     "quotes": [
-      "error",
+      "off",
       "single",
       { "allowTemplateLiterals": true }
     ],
     "semi": [
       "error",
       "always"
-    ]
+    ],
+    "no-unused-vars": 1
   },
   "globals": {
   }
