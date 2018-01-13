@@ -8,3 +8,5 @@ export const getBlocksFulfilled = createAction('GET_BLOCKS_FULFILLED');
 export const getAccounts = createAction('GET_ACCOUNTS', getAccountsCall);
 
 export const getAccountsFulfilled = createAction('GET_ACCOUNTS_FULFILLED');
+
+export const submitSearchForm = createAction('SUBMIT_SEARCH_FORM');
