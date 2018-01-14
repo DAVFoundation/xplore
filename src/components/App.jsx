@@ -31,8 +31,11 @@ class App extends Component {
 
         <div className="gray-block">
           <TopBlocksContainer />
-          <BlocksContainer />
-          <AccountsContainer />
+          <div className="row">
+            <BlocksContainer />
+            <AccountsContainer />
+          </div>
+
         </div>
       </div>
     );
