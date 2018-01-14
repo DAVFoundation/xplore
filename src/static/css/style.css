@@ -18,7 +18,7 @@ body{
 	padding-top: 20px;
 	padding-bottom: 130px;
 }
-.xplorer input[type=submit]{
+.xplorer button[type=submit]{
 	width: 100%;
 	display: block;
 	border: none;
@@ -49,15 +49,15 @@ body{
 }
 
 .xplorer input[type=text]:-moz-placeholder {
-   color: #FFF;  
+   color: #FFF;
 }
 
 .xplorer input[type=text]::-moz-placeholder {
-   color: #FFF;  
+   color: #FFF;
 }
 
-.xplorer input[type=text]:-ms-input-placeholder {  
-   color: #FFF;  
+.xplorer input[type=text]:-ms-input-placeholder {
+   color: #FFF;
 }
 .xplorer h1{
 	text-align: center;
