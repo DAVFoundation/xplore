@@ -2,7 +2,33 @@ import Web3 from 'web3';
 const port = 8545;
 const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
 
-export const getAccounts = () => web3.eth.getAccounts();
+export const getAccounts = () => {
+  return web3.eth
+    .getAccounts()
+    .then((accounts)=>{
+      let acc = [];
+      for(var i in accounts){
+
+        acc.push(getBalance(accounts[i]));
+      }
+      return Promise.all(acc);
+    })
+    .then(acc => {
+      console.log(acc);
+      return Promise.resolve(acc);
+    });
+};
+
+function getBalance(account){
+  return web3.eth
+    .getBalance(account)
+    .then((bal)=>{
+      let obj = {};
+      obj["address"] = account;
+      obj["balance"] = web3.utils.fromWei(bal);
+      return obj;
+    });
+}
 
 export const getBlocks = () => {
   const maxBlockCount = 10;
@@ -19,7 +45,10 @@ export const getBlocks = () => {
       }
       return Promise.all(blocks);
     })
-    .then(blocks => Promise.resolve(blocks));
+    .then(blocks => {
+      return Promise.resolve(blocks);
+
+    });
 };
 
 export const getLatestBlock = () => {
