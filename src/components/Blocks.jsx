@@ -17,8 +17,18 @@ const Blocks = ({blocks}) => (
         </div>
       </div>
       <div className="header-separator"></div>
-      {blocks.map(block => (
-        <div key={block.hash}>{block.number} - {block.hash}</div>
+      {blocks.map((block,index) => (
+        <div className="row" key={index}>
+          <div className="col-xs-4 text-left">
+            <p className="block-number">{block.number}</p>
+          </div>
+          <div className="col-xs-4 text-center">
+            <p>{block.transactions.length}</p>
+          </div>
+          <div className="col-xs-4 text-right">
+            <p>{block.timestamp}</p>
+          </div>
+        </div>
       ))}
     </div>
   </div>
