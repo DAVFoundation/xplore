@@ -14,7 +14,6 @@ export const getAccounts = () => {
       return Promise.all(acc);
     })
     .then(acc => {
-      console.log(acc);
       return Promise.resolve(acc);
     });
 };
