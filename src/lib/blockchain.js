@@ -103,4 +103,5 @@ export const search = (query) => {
   case 'address':
     break;
   }
+
 };
