@@ -6,25 +6,29 @@ const initialState = {
       title:'Last Block',
       action:'getLatestBlock',
       class:'last-block',
-      icon:'last-block.png'
+      icon:'last-block.png',
+      tag:'lastBlock'
     },
     {
       title:'RPC Server',
       action:'getRpcServer',
       class:'rpc-server',
-      icon:'rpc-server.png'
+      icon:'rpc-server.png',
+      tag:'rpcServer'
     },
     {
       title:'Transactions',
       action:'getTransactionCount',
       class:'transactions',
-      icon:'transactions.png'
+      icon:'transactions.png',
+      tag:'transactions'
     },
     {
       title:'Mining Status',
       action:'getMiningStatus',
       class:'mining-status',
-      icon:'mining-status.png'
+      icon:'mining-status.png',
+      tag:'miningStatus'
     }
   ]
 };
