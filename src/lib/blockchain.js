@@ -1,4 +1,6 @@
 import Web3 from 'web3';
+import transactions from "../reducers/transactions";
+
 const port = 8545;
 const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
 
@@ -16,6 +18,26 @@ export const getAccounts = () => {
     .then(acc => {
       return Promise.resolve(acc);
     });
+};
+
+export const getTransactions = async () => {
+  const maxTransactionsCount = 5;
+  const blocks = await getBlocks();
+
+  let transactions = [];
+  for (let i in blocks) {
+    let blockTransactions;
+    if (transactions.length < maxTransactionsCount){
+      blockTransactions = await Promise.all(blocks[i].transactions.map(async (hash) => {
+        return await web3.eth.getTransaction(hash);
+      }));
+      transactions = transactions.concat(blockTransactions);
+    } else {
+      break;
+    }
+  }
+  transactions = transactions.slice(0, maxTransactionsCount);
+  return transactions;
 };
 
 function getBalance(account){
@@ -46,7 +68,6 @@ export const getBlocks = () => {
     })
     .then(blocks => {
       return Promise.resolve(blocks);
-
     });
 };
 

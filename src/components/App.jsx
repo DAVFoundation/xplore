@@ -4,7 +4,8 @@ import BlocksContainer from '../containers/BlocksContainer.jsx';
 import AccountsContainer from '../containers/AccountsContainer.jsx';
 import SearchFormContainer from '../containers/SearchFormContainer.jsx';
 import TopBlocksContainer from '../containers/TopBlocksContainer.jsx';
-import { getBlocks, getAccounts } from '../actions';
+import TransactionsContainer from '../containers/TransactionsContainer.jsx';
+import {getBlocks, getAccounts, getTransactions} from '../actions';
 import '../static/css/style.css';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
   componentDidMount() {
     store.dispatch(getBlocks());
     store.dispatch(getAccounts());
+    store.dispatch(getTransactions());
   }
 
   render() {
@@ -35,7 +37,9 @@ class App extends Component {
             <BlocksContainer />
             <AccountsContainer />
           </div>
-
+          <div className="row">
+            <TransactionsContainer />
+          </div>
         </div>
       </div>
     );
