@@ -1,6 +1,4 @@
 import Web3 from 'web3';
-import transactions from "../reducers/transactions";
-
 const port = 8545;
 const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
 
@@ -29,7 +27,9 @@ export const getTransactions = async () => {
     let blockTransactions;
     if (transactions.length < maxTransactionsCount){
       blockTransactions = await Promise.all(blocks[i].transactions.map(async (hash) => {
-        return await web3.eth.getTransaction(hash);
+        const tx = await web3.eth.getTransaction(hash);
+        tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
+        return tx;
       }));
       transactions = transactions.concat(blockTransactions);
     } else {

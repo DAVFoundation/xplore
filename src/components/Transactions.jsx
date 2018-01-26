@@ -9,9 +9,19 @@ class Transactions extends Component {
   render(){
     let transactions = this.props.transactions.map((transaction, index) => {
       return (
-        <div className="row" key={index}>
-          <div className="white-container">
-            <p>Hash:</p> {transaction.hash}
+        <div key={index} className="white-container transaction-item">
+          <div className="row">
+            <div className="col-xs-6 text-left">
+              <p className="header-custom"><strong>{transaction.ethValue}</strong> ETH</p>
+            </div>
+          </div>
+          <div className="header-separator"></div>
+          <div className="row">
+            <div className="col-xs-12">
+              <p className="hash">Hash: <span className="blue">{transaction.hash}</span></p>
+              <p>From: <span className="blue">{transaction.from}</span></p>
+              <p>To: <span className="blue">{transaction.to}</span></p>
+            </div>
           </div>
         </div>
       );

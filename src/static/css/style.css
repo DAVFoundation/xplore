@@ -203,12 +203,12 @@ box-shadow: 0px 0px 10px 0px rgba(222,223,230,1);
 .white-container .row:last-child p.block-number:after{
 	display: none;
 }
-.white-container p.blue,
-.white-container p.address-number{
+.white-container .blue,
+.white-container .address-number{
 	color: #327fff;
 }
-.white-container p span{
-	font-weight: 700;
+.white-container p.hash {
+  word-break: break-all;
 }
 .white-container.transact{
 	margin-bottom: 17px;
@@ -238,25 +238,38 @@ h3.block-title{
 	margin-left: -30px;
 	margin-right: -30px;
 }
-.green-circle{
-	display: block;
-	border: 2px solid #26dca9;
-	width: 13px;
-	height: 13px;
-	border-radius: 50%;
-	margin: 30px auto 0;
-	position: relative;
-	background: #f3f4f9;
-}
-.green-circle:after{
-	content: '';
-	width: 1px;
-	height: 240px;
-	border-left: 2px dashed #e0e0e0;
-	position: absolute;
-	top: 13px;
-	left: 3px;
-}
+
 .transactions-history .row:last-child .green-circle:after{
 	display: none;
+}
+
+/* .transaction-item */
+
+.transaction-item {
+  position: relative;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.transaction-item:before {
+  content: "";
+  border: 2px solid #26dca9;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f3f4f9;
+  position: absolute;
+  top: 30px;
+  left: -35px;
+  z-index: 1;
+}
+
+.transaction-item + .transaction-item:after {
+  content: "";
+  width: 1px;
+  height: calc(100% + 20px);
+  border-left: 2px dashed #e0e0e0;
+  position: absolute;
+  left: -30px;
+  top: calc(-100% + 20px);
 }
