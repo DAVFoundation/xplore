@@ -19,8 +19,8 @@ export const getAccounts = () => {
 };
 
 export const getTransactions = async () => {
-  const maxTransactionsCount = 5;
-  const blocks = await getBlocks();
+  const maxTransactionsCount = 10;
+  const blocks = await getBlocks(10);
 
   let transactions = [];
   for (let i in blocks) {
@@ -51,8 +51,7 @@ function getBalance(account){
     });
 }
 
-export const getBlocks = () => {
-  const maxBlockCount = 10;
+export const getBlocks = (maxBlockCount = 3) => {
   // get block count
   return web3.eth
     .getBlockNumber()

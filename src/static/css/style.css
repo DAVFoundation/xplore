@@ -185,12 +185,12 @@ box-shadow: 0px 0px 10px 0px rgba(222,223,230,1);
 	font-weight: 500;
 	font-size: 17px;
 }
-.white-container p.block-number{
+.white-container p.transaction-hash{
 	background: url('../images/dot.png') no-repeat left center;
 	padding-left: 20px;
 	position: relative;
 }
-.white-container p.block-number:after{
+.white-container p.transaction-hash:after{
 	content: '';
 	display: block;
 	position: absolute;
@@ -200,7 +200,7 @@ box-shadow: 0px 0px 10px 0px rgba(222,223,230,1);
 	height: 40px;
 	background: #e0e0e0;
 }
-.white-container .row:last-child p.block-number:after{
+.white-container .row:last-child p.transaction-hash:after{
 	display: none;
 }
 .white-container .blue,
