@@ -38,6 +38,7 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-devtools-extension": "^2.13.2",
+    "redux-form": "^7.1.0",
     "redux-promise-middleware": "^5.0.0",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
@@ -45,8 +46,5 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1",
     "webpack-merge": "^4.1.1"
-  },
-  "dependencies": {
-    "redux-form": "^7.1.0"
   }
 }
