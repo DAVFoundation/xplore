@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container xplorer">
+      <div className="container-fluid xplorer">
         <div className="row">
           <div className="col-sm-6">
             <a href="#" className="logo"><img src="../static/images/logo.png"/></a>
