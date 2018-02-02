@@ -7,10 +7,9 @@ class SearchForm extends Component{
     super(props);
   }
 
-  submit(values){
+  submit(){
     console.log("values");
     return;
-    //this.props.submitStationForm({values});
   }
 
   render(){

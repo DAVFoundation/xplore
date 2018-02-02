@@ -3,9 +3,7 @@ import {reduxForm} from 'redux-form';
 import SearchForm from '../components/SearchForm.jsx';
 import {submitSearchForm} from '../actions';
 
-const mapStateToProps = (state) => ({
-
-});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
   submitSearchForm: (obj) => dispatch(submitSearchForm(obj))
