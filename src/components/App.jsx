@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import store from '../store';
 import BlocksContainer from '../containers/BlocksContainer.jsx';
 import AccountsContainer from '../containers/AccountsContainer.jsx';
 import SearchFormContainer from '../containers/SearchFormContainer.jsx';
 import TopBlocksContainer from '../containers/TopBlocksContainer.jsx';
-import { getBlocks, getAccounts } from '../actions';
+import TransactionsContainer from '../containers/TransactionsContainer.jsx';
+import {getBlocks, getAccounts, getTransactions} from '../actions';
 import '../static/css/style.css';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
   componentDidMount() {
     store.dispatch(getBlocks());
     store.dispatch(getAccounts());
+    store.dispatch(getTransactions());
   }
 
   render() {
@@ -19,10 +21,10 @@ class App extends Component {
       <div className="container xplorer">
         <div className="row">
           <div className="col-sm-6">
-            <a href="#" className="logo"><img src="../static/images/logo.png" /></a>
+            <a href="#" className="logo"><img src="../static/images/logo.png"/></a>
           </div>
           <div className="col-sm-6">
-            <SearchFormContainer />
+            <SearchFormContainer/>
           </div>
         </div>
 
@@ -30,12 +32,14 @@ class App extends Component {
         <h1>DAV Block Explorer</h1>
 
         <div className="gray-block">
-          <TopBlocksContainer />
+          <TopBlocksContainer/>
           <div className="row">
-            <BlocksContainer />
-            <AccountsContainer />
+            <TransactionsContainer/>
+            <AccountsContainer/>
           </div>
-
+          <div className="row">
+            <BlocksContainer/>
+          </div>
         </div>
       </div>
     );

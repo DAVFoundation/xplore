@@ -18,6 +18,28 @@ export const getAccounts = () => {
     });
 };
 
+export const getTransactions = async () => {
+  const maxTransactionsCount = 10;
+  const blocks = await getBlocks(10);
+
+  let transactions = [];
+  for (let i in blocks) {
+    let blockTransactions;
+    if (transactions.length < maxTransactionsCount){
+      blockTransactions = await Promise.all(blocks[i].transactions.map(async (hash) => {
+        const tx = await web3.eth.getTransaction(hash);
+        tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
+        return tx;
+      }));
+      transactions = transactions.concat(blockTransactions);
+    } else {
+      break;
+    }
+  }
+  transactions = transactions.slice(0, maxTransactionsCount);
+  return transactions;
+};
+
 function getBalance(account){
   return web3.eth
     .getBalance(account)
@@ -29,8 +51,7 @@ function getBalance(account){
     });
 }
 
-export const getBlocks = () => {
-  const maxBlockCount = 10;
+export const getBlocks = (maxBlockCount = 3) => {
   // get block count
   return web3.eth
     .getBlockNumber()
@@ -46,7 +67,6 @@ export const getBlocks = () => {
     })
     .then(blocks => {
       return Promise.resolve(blocks);
-
     });
 };
 

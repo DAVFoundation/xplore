@@ -16,7 +16,7 @@ class Accounts extends Component {
           </div>
           <div className="col-xs-6 text-right">
             <p>
-              <span>{bal}</span>
+              <strong>{bal}</strong>
               ETH
             </p>
           </div>

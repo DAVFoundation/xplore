@@ -15,6 +15,7 @@ module.exports = (env = 'development') => {
         'redux-actions',
         'redux-devtools-extension',
         'redux-promise-middleware',
+        'babel-polyfill'
       ],
     },
     output: {
