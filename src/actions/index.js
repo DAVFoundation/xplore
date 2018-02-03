@@ -1,5 +1,7 @@
 import { createAction } from 'redux-actions';
-import { getBlocks as getBlocksCall, getAccounts as getAccountsCall, getTransactions as getTransactionsCall } from '../lib/blockchain';
+import { getBlocks as getBlocksCall, getAccounts as getAccountsCall, getTransactions as getTransactionsCall, watchEvents as watchEventsCall } from '../lib/blockchain';
+
+export const watchEvents = createAction('WATCH_EVENTS', watchEventsCall());
 
 export const getBlocks = createAction('GET_BLOCKS', getBlocksCall);
 

@@ -1,6 +1,36 @@
 import Web3 from 'web3';
+import contractABIs from './contracts';
+import eventContracts from './eventContracts';
+
 const port = 8545;
-const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
+const web3 = new Web3(new Web3.providers.WebsocketProvider(`ws://localhost:${port}`));
+
+export const watchEvents = () => {
+  const eventContractNames = Object.keys(eventContracts);
+
+  for (let i in eventContractNames){
+    const contractName = eventContractNames[i];
+    const contractAddress = eventContracts[contractName].address;
+    const abi = contractABIs[contractName].abi;
+
+    const ContractInstance = new web3.eth.Contract(abi, contractAddress);
+
+    const eventsToWatch = eventContracts[contractName].eventsToWatch;
+
+    for (let j in eventsToWatch) {
+      const eventName = eventsToWatch[j];
+
+      ContractInstance.events[eventName]((error, result) => {
+        if (!error) {
+          console.log("Hahaha");
+          console.log(result);
+        } else {
+          console.log(error);
+        }
+      });
+    }
+  }
+};
 
 export const getAccounts = () => {
   return web3.eth

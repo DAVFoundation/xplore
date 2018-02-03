@@ -5,12 +5,13 @@ import AccountsContainer from '../containers/AccountsContainer.jsx';
 import SearchFormContainer from '../containers/SearchFormContainer.jsx';
 import TopBlocksContainer from '../containers/TopBlocksContainer.jsx';
 import TransactionsContainer from '../containers/TransactionsContainer.jsx';
-import {getBlocks, getAccounts, getTransactions} from '../actions';
+import {getBlocks, getAccounts, getTransactions, watchEvents} from '../actions';
 import '../static/css/style.css';
 
 class App extends Component {
 
   componentDidMount() {
+    store.dispatch(watchEvents());
     store.dispatch(getBlocks());
     store.dispatch(getAccounts());
     store.dispatch(getTransactions());
