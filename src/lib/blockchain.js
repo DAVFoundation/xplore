@@ -3,41 +3,36 @@ import contractABIs from './contracts';
 import eventContracts from './eventContracts';
 
 const port = 8545;
-const web3 = new Web3(new Web3.providers.WebsocketProvider(`ws://localhost:${port}`));
+const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
 
-export const watchEvents = () => {
+export const getEvents = async () => {
+  const maxEventsCount = 10;
+
   const eventContractNames = Object.keys(eventContracts);
-
-  for (let i in eventContractNames){
+  for (let i in eventContractNames) {
     const contractName = eventContractNames[i];
     const contractAddress = eventContracts[contractName].address;
     const abi = contractABIs[contractName].abi;
 
     const ContractInstance = new web3.eth.Contract(abi, contractAddress);
-
+    const unfilteredEvents = await ContractInstance.getPastEvents("allEvents");
     const eventsToWatch = eventContracts[contractName].eventsToWatch;
+    const filteredEvents = unfilteredEvents.filter(event => eventsToWatch.includes(event.event));
+    const events = filteredEvents.map((event) => {
+      event.contractName = contractName;
+      return event;
+    });
 
-    for (let j in eventsToWatch) {
-      const eventName = eventsToWatch[j];
-
-      ContractInstance.events[eventName]((error, result) => {
-        if (!error) {
-          console.log("Hahaha");
-          console.log(result);
-        } else {
-          console.log(error);
-        }
-      });
-    }
+    return events.slice(0, maxEventsCount);
   }
 };
 
 export const getAccounts = () => {
   return web3.eth
     .getAccounts()
-    .then((accounts)=>{
+    .then((accounts) => {
       let acc = [];
-      for(var i in accounts){
+      for (var i in accounts) {
 
         acc.push(getBalance(accounts[i]));
       }
@@ -55,7 +50,7 @@ export const getTransactions = async () => {
   let transactions = [];
   for (let i in blocks) {
     let blockTransactions;
-    if (transactions.length < maxTransactionsCount){
+    if (transactions.length < maxTransactionsCount) {
       blockTransactions = await Promise.all(blocks[i].transactions.map(async (hash) => {
         const tx = await web3.eth.getTransaction(hash);
         tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
@@ -70,10 +65,10 @@ export const getTransactions = async () => {
   return transactions;
 };
 
-function getBalance(account){
+function getBalance(account) {
   return web3.eth
     .getBalance(account)
-    .then((bal)=>{
+    .then((bal) => {
       let obj = {};
       obj["address"] = account;
       obj["balance"] = web3.utils.fromWei(bal);
@@ -121,7 +116,7 @@ export const getTransactionCount = (block) => {
 export const getMiningStatus = () => {
   web3.eth
     .isMining()
-    .then(status=>{
+    .then(status => {
       console.log(status);
       return status;
     });
@@ -129,17 +124,17 @@ export const getMiningStatus = () => {
 
 export const search = (query) => {
   let type = 'tx';
-  if(!isNaN(query)){
+  if (!isNaN(query)) {
     type = 'block';
-  }else if(web3.utils.isAddress(query)){
+  } else if (web3.utils.isAddress(query)) {
     type = 'address';
   }
 
-  switch(type){
+  switch (type) {
   case 'tx':
     web3.eth
       .getTransaction(query)
-      .then(tx=>{
+      .then(tx => {
         console.log(tx);
       });
     break;
