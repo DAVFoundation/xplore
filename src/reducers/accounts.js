@@ -5,9 +5,7 @@ const defaultState = [];
 
 export default handleActions(
   {
-    [getAccountsFulfilled]: (state, { payload }) => {
-      return payload;
-    },
+    [getAccountsFulfilled]: (state, { payload }) => payload,
   },
   defaultState,
 );
