@@ -14,7 +14,7 @@
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch --watchAll"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
