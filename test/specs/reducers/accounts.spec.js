@@ -1,4 +1,4 @@
-import reducer from '../../src/reducers/accounts';
+import reducer from '../../../src/reducers/accounts';
 
 describe('Accounts reducer', () => {
   describe('When GET_ACCOUNTS_FULFILLED action is fired', () => {
