@@ -4,7 +4,5 @@ import { getTransactionsFulfilled } from '../actions';
 const defaultState = [];
 
 export default handleActions({
-  [getTransactionsFulfilled]: (state, { payload }) => {
-    return payload;
-  }
+  [getTransactionsFulfilled]: (state, { payload }) => payload
 },defaultState);
