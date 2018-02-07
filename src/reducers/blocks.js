@@ -5,9 +5,7 @@ const defaultState = [];
 
 export default handleActions(
   {
-    [getBlocksFulfilled]: (state, { payload }) => {
-      return payload;
-    },
+    [getBlocksFulfilled]: (state, { payload }) => payload,
   },
   defaultState,
 );
