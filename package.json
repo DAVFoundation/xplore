@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/DAVFoundation/xplore.git"
   },
+  "bugs": {
+    "url": "https://github.com/DAVFoundation/xplore/issues"
+  },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
