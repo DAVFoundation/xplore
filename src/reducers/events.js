@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import {getBlocksFulfilled, getEventsFulfilled} from '../actions';
+import {getEventsFulfilled} from '../actions';
 
 const defaultState = [];
 
