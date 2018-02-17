@@ -3,7 +3,8 @@ import contractABIs from './contracts';
 import eventContracts from './eventContracts';
 
 const port = 8545;
-const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
+const url = 'http://localhost';
+const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
 export const getEvents = async () => {
   const maxEventsCount = 10;
