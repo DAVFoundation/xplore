@@ -1,5 +1,5 @@
 const config = {
-  port: 8545
+  default_port: 8545
 };
 
 export default (key) => {

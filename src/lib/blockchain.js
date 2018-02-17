@@ -3,7 +3,7 @@ import contractABIs from './contracts';
 import eventContracts from './eventContracts';
 import config from '../config';
 
-const port = config('port');
+const port = config('default_port');
 const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
 
 export const getEvents = async () => {
