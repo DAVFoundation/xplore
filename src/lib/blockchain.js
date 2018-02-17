@@ -4,7 +4,8 @@ import eventContracts from './eventContracts';
 import config from '../config';
 
 const port = config('default_port');
-const web3 = new Web3(new Web3.providers.HttpProvider(`http://localhost:${port}`));
+const url = 'http://localhost';
+const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
 export const getEvents = async () => {
   const maxEventsCount = 10;
