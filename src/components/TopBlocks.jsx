@@ -7,9 +7,8 @@ class TopBlocks extends Component {
   }
 
   render(){
-
     var topList = this.props.blockList.map((block, index) => {
-      return (<BlockItem key={index} action={block.action} title={block.title} classId={block.class} icon={block.icon}/>);
+      return (<BlockItem key={index} action={block.action} title={block.title} classId={block.class} icon={block.icon} value={block.value}/>);
     });
     return(
       <div className="row">
@@ -36,7 +35,7 @@ class BlockItem extends Component {
           <div className="row">
             <div className="col-xs-8">
               <h4>{this.props.title}</h4>
-              <h3></h3>
+              <h3>{this.props.value}</h3>
             </div>
             <div className="col-xs-4">
               <img src={imgPath}/>
@@ -49,13 +48,15 @@ class BlockItem extends Component {
 }
 
 TopBlocks.propTypes = {
-  blockList: PropTypes.array
+  blockList: PropTypes.array,
+  getRpcServer: PropTypes.func
 };
 
 BlockItem.propTypes = {
   classId: PropTypes.string,
   title: PropTypes.string,
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  value: PropTypes.string
 };
 
 export default TopBlocks;

@@ -150,3 +150,7 @@ export const search = (query) => {
   }
 
 };
+
+export const getRpcServer = () => {
+  return web3.eth.currentProvider.host;
+};
