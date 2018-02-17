@@ -1,8 +1,9 @@
 import Web3 from 'web3';
 import contractABIs from './contracts';
 import eventContracts from './eventContracts';
+import config from '../config';
 
-const port = 8545;
+const port = config('default_port');
 const url = 'http://localhost';
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
