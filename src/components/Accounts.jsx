@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import AccountBalance from './AccountBalance.jsx';
 
 class Accounts extends Component {
   constructor(props){
@@ -7,22 +8,6 @@ class Accounts extends Component {
   }
 
   render(){
-    let accounts = this.props.accounts.map((account, index) => {
-      let bal = parseFloat(account.balance).toFixed(2);
-      return (
-        <div className="row" key={index}>
-          <div className="col-xs-6 text-left">
-            <p className="address-number">{account.address}</p>
-          </div>
-          <div className="col-xs-6 text-right">
-            <p>
-              <strong>{bal}</strong>
-              ETH
-            </p>
-          </div>
-        </div>
-      );
-    });
 
     return(
       <div className="col-sm-6">
@@ -38,7 +23,13 @@ class Accounts extends Component {
           </div>
 
           <div className="header-separator"></div>
-          {accounts}
+          {this.props.accounts.map((account, index) => {
+            return (
+              <AccountBalance key={index}
+                address={account.address}
+                balance={parseFloat(account.balance).toFixed(2)} />
+            );
+          })}
         </div>
       </div>
     );
