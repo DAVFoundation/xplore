@@ -48,8 +48,7 @@ class BlockItem extends Component {
 }
 
 TopBlocks.propTypes = {
-  blockList: PropTypes.array,
-  getRpcServer: PropTypes.func
+  blockList: PropTypes.array
 };
 
 BlockItem.propTypes = {

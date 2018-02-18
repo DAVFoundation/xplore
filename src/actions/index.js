@@ -26,4 +26,4 @@ export const getTransactionCount = createAction('GET_TRANSACTION_COUNT', getTran
 
 export const getLatestBlock = createAction('GET_LATEST_BLOCK', getLatestBlockCall);
 
-export const getRpcServer = createAction('GET_TOP_BLOCKS', getRpcServerCall);
+export const getRpcServer = createAction('GET_RPC_SERVER', getRpcServerCall);
