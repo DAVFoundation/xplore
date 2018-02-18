@@ -7,6 +7,7 @@ class Block extends Component {
     super(props);
   }
   render(){
+    const dateOptions = { hour: '2-digit', minute: '2-digit', second:'2-digit', hour12: false };
     return(
       <div className="white-container transaction-item">
         <div className="row">
@@ -19,7 +20,7 @@ class Block extends Component {
           <div className="col-xs-12">
             <p className="hash">Block: <span className="blue">{this.props.block.number}</span></p>
             <p>Transactions: <span className="blue">{this.props.block.transactions.length}</span></p>
-            <p>Time: <span className="blue">{this.props.date.toLocaleString('en-US', this.props.dateOptions)}</span></p>
+            <p>Time: <span className="blue">{this.props.date.toLocaleString('en-US', dateOptions)}</span></p>
           </div>
         </div>
       </div>
@@ -30,7 +31,6 @@ class Block extends Component {
 Block.propTypes = {
   block: PropTypes.object.isRequired,
   date: PropTypes.object.isRequired,
-  dateOptions: PropTypes.object.isRequired,
 };
 
 export default Block;

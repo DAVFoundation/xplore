@@ -14,8 +14,7 @@ class Blocks extends Component {
         {this.props.blocks.map((block, index) => <Block
           key={index}
           block={block}
-          date={new Date(block.timestamp * 1000)}
-          dateOptions={{hour: '2-digit', minute: '2-digit',second:'2-digit', hour12: false}} />
+          date={new Date(block.timestamp * 1000)} />
         )}
       </div>
     );
