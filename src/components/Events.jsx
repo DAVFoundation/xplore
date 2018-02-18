@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { truncate } from "../lib/utils";
+import { Event } from "./Event.jsx";
 
 class Events extends Component{
   constructor(props){
@@ -8,22 +8,6 @@ class Events extends Component{
   }
 
   render(){
-    let events = this.props.events.map((event, index) => {
-      return (
-        <div className="row" key={index}>
-          <div className="col-xs-3 text-left">
-            <p>{event.event}</p>
-          </div>
-          <div className="col-xs-6 text-center">
-            <p>{event.contractName} (<span className="address-number">{truncate(event.address, 8, 8)}</span>)</p>
-          </div>
-          <div className="col-xs-3 text-right">
-            <p>{event.blockNumber}</p>
-          </div>
-        </div>
-      );
-    });
-
     return (
       <div className="col-sm-6">
         <h3 className="block-title">Events</h3>
@@ -40,13 +24,15 @@ class Events extends Component{
             </div>
           </div>
           <div className="header-separator"></div>
-          {events}
+          { this.props.events.map((event, index) => <Event 
+            key={index}
+            event={event} /> 
+          )}
         </div>
       </div>
     );
   }
 }
-
 
 Events.propTypes = {
   events: PropTypes.array.isRequired,
