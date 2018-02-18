@@ -50,10 +50,10 @@ export const getTransactions = async () => {
   const blocks = await getBlocks(10);
 
   let transactions = [];
-  for (let i in blocks) {
+  for (const block of blocks) {
     let blockTransactions;
     if (transactions.length < maxTransactionsCount) {
-      blockTransactions = await Promise.all(blocks[i].transactions.map(async (hash) => {
+      blockTransactions = await Promise.all(block.transactions.map(async (hash) => {
         const tx = await web3.eth.getTransaction(hash);
         tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
         return tx;
