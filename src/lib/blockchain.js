@@ -4,7 +4,7 @@ import eventContracts from './eventContracts';
 import config from '../config';
 
 const port = config('default_port');
-const url = 'http://localhost';
+const url = config('default_url');
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
 export const getEvents = async () => {
@@ -133,22 +133,22 @@ export const search = (query) => {
   }
 
   switch (type) {
-  case 'tx':
-    web3.eth
-      .getTransaction(query)
-      .then(tx => {
-        console.log(tx);
-      });
-    break;
-  case 'block':
-    web3.eth
-      .getBlock(parseInt(query))
-      .then(block => {
-        console.log(block);
-      });
-    break;
-  case 'address':
-    break;
+    case 'tx':
+      web3.eth
+        .getTransaction(query)
+        .then(tx => {
+          console.log(tx);
+        });
+      break;
+    case 'block':
+      web3.eth
+        .getBlock(parseInt(query))
+        .then(block => {
+          console.log(block);
+        });
+      break;
+    case 'address':
+      break;
   }
 
 };
