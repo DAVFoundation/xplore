@@ -1,5 +1,6 @@
 const config = {
-  default_port: 8545
+  default_port: 8545,
+  max_events_count: 10
 };
 
 export default (key) => {
