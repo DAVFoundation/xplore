@@ -1,6 +1,7 @@
 const config = {
   default_port: 8545,
-  default_url: 'http://localhost'
+  default_url: 'http://localhost',
+  max_events_count: 10
 };
 
 export default (key) => {
