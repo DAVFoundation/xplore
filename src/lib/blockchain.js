@@ -34,9 +34,9 @@ export const getAccounts = () => {
     .getAccounts()
     .then((accounts) => {
       let acc = [];
-      for (var i in accounts) {
+      for (const account of accounts) {
 
-        acc.push(getBalance(accounts[i]));
+        acc.push(getBalance(account));
       }
       return Promise.all(acc);
     })
