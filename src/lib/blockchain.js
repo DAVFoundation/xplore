@@ -4,7 +4,6 @@ import eventContracts from './eventContracts';
 import config from '../config';
 
 const port = config('default_port');
-const maxBlockCount = config('max_block_count');
 const url = 'http://localhost';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
@@ -80,8 +79,8 @@ function getBalance(account) {
     });
 }
 
-export const getBlocks = (maxBlockCount) => {
-  // get block count
+export const getBlocks = () => {
+  const maxBlockCount = config('max_block_count');
   return web3.eth
     .getBlockNumber()
     .then(latestBlock => {
