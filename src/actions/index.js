@@ -1,6 +1,6 @@
 import { createAction } from 'redux-actions';
 
-import { getBlocks as getBlocksCall, getAccounts as getAccountsCall, getTransactions as getTransactionsCall, getEvents as getEventsCall, getLatestBlock as getLatestBlockCall, getTransactionCount as getTransactionCountCall, getMiningStatus as getMiningStatusCall } from '../lib/blockchain';
+import { getBlocks as getBlocksCall, getAccounts as getAccountsCall, getTransactions as getTransactionsCall, getEvents as getEventsCall, getLatestBlock as getLatestBlockCall, getTransactionCount as getTransactionCountCall, getMiningStatus as getMiningStatusCall, getRpcServer as getRpcServerCall } from '../lib/blockchain';
 
 export const getEvents = createAction('GET_EVENTS', getEventsCall);
 
@@ -25,3 +25,5 @@ export const getMiningStatus = createAction('GET_MINING_STATUS', getMiningStatus
 export const getTransactionCount = createAction('GET_TRANSACTION_COUNT', getTransactionCountCall);
 
 export const getLatestBlock = createAction('GET_LATEST_BLOCK', getLatestBlockCall);
+
+export const getRpcServer = createAction('GET_RPC_SERVER', getRpcServerCall);
