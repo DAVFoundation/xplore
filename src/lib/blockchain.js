@@ -5,10 +5,11 @@ import config from '../config';
 
 const port = config('default_port');
 const url = 'http://localhost';
+
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
 export const getEvents = async () => {
-  const maxEventsCount = 10;
+  const maxEventsCount = config('max_events_count');
 
   const eventContractNames = Object.keys(eventContracts);
   for (let i in eventContractNames) {
@@ -34,9 +35,9 @@ export const getAccounts = () => {
     .getAccounts()
     .then((accounts) => {
       let acc = [];
-      for (var i in accounts) {
+      for (const account of accounts) {
 
-        acc.push(getBalance(accounts[i]));
+        acc.push(getBalance(account));
       }
       return Promise.all(acc);
     })
