@@ -79,8 +79,8 @@ function getBalance(account) {
     });
 }
 
-export const getBlocks = (maxBlockCount = 3) => {
-  // get block count
+export const getBlocks = () => {
+  const maxBlockCount = config('max_block_count');
   return web3.eth
     .getBlockNumber()
     .then(latestBlock => {
