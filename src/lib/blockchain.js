@@ -12,8 +12,7 @@ export const getEvents = async () => {
   const maxEventsCount = config('max_events_count');
 
   const eventContractNames = Object.keys(eventContracts);
-  for (let i in eventContractNames) {
-    const contractName = eventContractNames[i];
+  for (const contractName of eventContractNames) {
     const contractAddress = eventContracts[contractName].address;
     const abi = contractABIs[contractName].abi;
 
