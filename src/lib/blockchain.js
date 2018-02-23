@@ -4,7 +4,7 @@ import eventContracts from './eventContracts';
 import config from '../config';
 
 const port = config('default_port');
-const url = 'http://localhost';
+const url = config('default_url');
 
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
