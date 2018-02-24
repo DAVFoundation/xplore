@@ -3,6 +3,9 @@ import { getTransactionsFulfilled } from '../actions';
 
 const defaultState = [];
 
-export default handleActions({
-  [getTransactionsFulfilled]: (state, { payload }) => payload
-},defaultState);
+export default handleActions(
+  {
+    [getTransactionsFulfilled]: (state, { payload }) => payload
+  },
+  defaultState,
+);
