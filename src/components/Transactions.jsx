@@ -12,13 +12,13 @@ class Transactions extends Component{
       return (
         <div className="row" key={index}>
           <div className="col-xs-3 text-center">
-            <p>{truncate(transaction.hash, 6, 6)}</p>
+            <p>{truncate(transaction.hash, 6)}</p>
           </div>
           <div className="col-xs-3 text-center">
-            <p>{truncate(transaction.from, 6, 6)}</p>
+            <p>{truncate(transaction.from, 6)}</p>
           </div>
           <div className="col-xs-3 text-center">
-            <p>{truncate(transaction.to, 6, 6)}</p>
+            <p>{truncate(transaction.to, 6)}</p>
           </div>
           <div className="col-xs-3 text-center">
             <p>{transaction.blockNumber}</p>

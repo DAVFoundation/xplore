@@ -1,4 +1,10 @@
-export const truncate = (addressOrHash, leadingCharacterCount = 4, trailingCharacterCount = 4) => {
-  const truncated = addressOrHash ? addressOrHash.substring(0, leadingCharacterCount) + "..." + addressOrHash.substring(addressOrHash.length - (trailingCharacterCount + 1), addressOrHash.length - 1) : 'N/A';
+export const truncate = (text, visibleCharacters=4) => {
+  if(! text){
+    return `N/A`;
+  }else{
+    var truncated = text.substring(0, visibleCharacters);
+    truncated += "...";
+    truncated += text.substring( text.length - (visibleCharacters + 1), text.length - 1);
+  }
   return truncated;
 };

@@ -13,7 +13,7 @@ class Event extends Component{
           <p>{event.event}</p>
         </div>
         <div className="col-xs-6 text-center">
-          <p>{event.contractName} (<span className="address-number">{truncate(event.address, 8, 8)}</span>)</p>
+          <p>{event.contractName} (<span className="address-number">{truncate(event.address, 8)}</span>)</p>
         </div>
         <div className="col-xs-3 text-right">
           <p>{event.blockNumber}</p>
