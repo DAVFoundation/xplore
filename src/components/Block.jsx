@@ -12,7 +12,7 @@ class Block extends Component {
       <div className="white-container transaction-item">
         <div className="row">
           <div className="col-xs-6 text-left">
-            <p className="header-custom"><strong>{this.props.block.ethValue}</strong> {truncate(this.props.block.hash, 20, 20)}</p>
+            <p className="header-custom"><strong>{this.props.block.ethValue}</strong> {truncate(this.props.block.hash, 20)}</p>
           </div>
         </div>
         <div className="header-separator"></div>
