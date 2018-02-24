@@ -17,10 +17,10 @@ export const getEvents = async () => {
     const abi = contractABIs[contractName].abi;
 
     const ContractInstance = new web3.eth.Contract(abi, contractAddress);
-    const unfilteredEvents = await ContractInstance.getPastEvents("allEvents");
+    const unfilteredEvents = await ContractInstance.getPastEvents('allEvents');
     const eventsToWatch = eventContracts[contractName].eventsToWatch;
     const filteredEvents = unfilteredEvents.filter(event => eventsToWatch.includes(event.event));
-    const events = filteredEvents.map((event) => {
+    const events = filteredEvents.map(event => {
       event.contractName = contractName;
       return event;
     });
@@ -32,10 +32,9 @@ export const getEvents = async () => {
 export const getAccounts = () => {
   return web3.eth
     .getAccounts()
-    .then((accounts) => {
+    .then(accounts => {
       let acc = [];
       for (const account of accounts) {
-
         acc.push(getBalance(account));
       }
       return Promise.all(acc);
@@ -53,11 +52,13 @@ export const getTransactions = async () => {
   for (const block of blocks) {
     let blockTransactions;
     if (transactions.length < maxTransactionsCount) {
-      blockTransactions = await Promise.all(block.transactions.map(async (hash) => {
-        const tx = await web3.eth.getTransaction(hash);
-        tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
-        return tx;
-      }));
+      blockTransactions = await Promise.all(
+        block.transactions.map(async hash => {
+          const tx = await web3.eth.getTransaction(hash);
+          tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
+          return tx;
+        }),
+      );
       transactions = transactions.concat(blockTransactions);
     } else {
       break;
@@ -124,7 +125,7 @@ export const getMiningStatus = () => {
     });
 };
 
-export const search = (query) => {
+export const search = query => {
   let type = 'tx';
   if (!isNaN(query)) {
     type = 'block';
@@ -150,7 +151,6 @@ export const search = (query) => {
   case 'address':
     break;
   }
-
 };
 
 export const getRpcServer = () => {

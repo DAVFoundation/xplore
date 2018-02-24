@@ -10,5 +10,5 @@ export default combineReducers({
   transactions,
   blocks,
   topBlocks,
-  events
+  events,
 });

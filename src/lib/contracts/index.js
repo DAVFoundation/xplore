@@ -1,5 +1,5 @@
-import DAVToken from "./DAVToken";
+import DAVToken from './DAVToken';
 
 export default {
-  DAVToken
+  DAVToken,
 };
