@@ -6,7 +6,7 @@ describe('RPC server reducer', () => {
       const state = [];
       const action = {
         type: 'GET_RPC_SERVER',
-        payload: 'getRpcServer'
+        payload: 'getRpcServer',
       };
       expect(reducer(state, action)).toEqual([]);
     });
