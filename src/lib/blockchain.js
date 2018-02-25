@@ -5,7 +5,7 @@ import config from '../config';
 
 const port = config('default_port');
 const url = config('default_url');
-const maxTransactionsCount = config('maxTransactionsCount');
+const maxTransactionsCount = config('max_transactions_count');
 
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
