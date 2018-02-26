@@ -62,4 +62,6 @@ export const getLatestBlockNumber = createAction(
   getLatestBlockCall,
 );
 
+export const getLatestBlockFulfilled = createAction('GET_LATEST_BLOCK_FULFILLED');
+
 export const getRpcServer = createAction('GET_RPC_SERVER', getRpcServerCall);

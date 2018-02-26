@@ -6,7 +6,7 @@ import SearchFormContainer from '../containers/SearchFormContainer.jsx';
 import HeaderSectionsContainer from '../containers/HeaderSectionsContainer.jsx';
 import TransactionsContainer from '../containers/TransactionsContainer.jsx';
 import EventsContainer from '../containers/EventsContainer.jsx';
-import {getBlocks, getAccounts, getTransactions, getLatestTransaction, getEvents} from '../actions';
+import {getBlocks, getAccounts, getTransactions, getLatestTransaction, getLatestBlock, getEvents} from '../actions';
 import '../static/css/style.css';
 
 class App extends Component {
@@ -17,6 +17,7 @@ class App extends Component {
     store.dispatch(getAccounts());
     store.dispatch(getTransactions());
     store.dispatch(getLatestTransaction());
+    store.dispatch(getLatestBlock());
   }
 
   render() {
