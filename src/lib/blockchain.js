@@ -5,6 +5,7 @@ import config from '../config';
 
 const port = config('default_port');
 const url = config('default_url');
+const maxTransactionsCount = config('max_transactions_count');
 
 const web3 = new Web3(new Web3.providers.HttpProvider(`${url}:${port}`));
 
@@ -45,7 +46,6 @@ export const getAccounts = () => {
 };
 
 export const getTransactions = async () => {
-  const maxTransactionsCount = 10;
   const blocks = await getBlocks(10);
 
   let transactions = [];

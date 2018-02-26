@@ -1,5 +1,6 @@
 const config = {
   default_port: 8545,
+  max_transactions_count: 10,
   default_url: 'http://localhost',
   max_events_count: 10,
 };
