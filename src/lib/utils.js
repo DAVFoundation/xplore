@@ -6,12 +6,9 @@ export const truncate = (
   if (!text) {
     return 'N/A';
   } else {
-    var truncated = text.substring(0, leadingCharacterCount);
+    var truncated = text.slice(0, leadingCharacterCount);
     truncated += '...';
-    truncated += text.substring(
-      text.length - (trailingCharacterCount + 1),
-      text.length - 1
-    );
+    truncated += text.slice(text.length - trailingCharacterCount, text.length);
   }
   return truncated;
 };
