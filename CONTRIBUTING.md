@@ -16,7 +16,7 @@ A lot of our code comes from pull requests sent by the developer community. Here
 
 - [x] Open the [Xplore GitHub page](https://github.com/DAVFoundation/xplore) and click the ★ Star and then ⑂ Fork buttons.
 - [x] Start a local Ethereum testnet on your machine by installing dav-cli (`npm install -g dav-cli`) and starting it (`dav-cli -s`). If you do not have a local testnet, you won't see any data in Xplore
-- [x] Clone a copy to your local machine with `$ git clone git@github.com:YOUR-GITHUB-USER-NAME/xplore.git`
+- [x] Clone a copy to your local machine with `$ git clone https://github.com/YOUR-GITHUB-USER-NAME/xplore.git`
 - [x] Run `npm install` to install all of its dependencies
 - [x] Run `npm start` to build the Xplore project and start a local server
 - [x] Visit http://localhost:3333/ to see your local copy of Xplore in action
