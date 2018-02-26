@@ -99,10 +99,9 @@ export const getBlocks = (maxBlockCount = 3) => {
 };
 
 export const getLatestBlock = () => {
-  web3.eth
+  return web3.eth
     .getBlockNumber()
     .then(latestBlock => {
-      console.log(latestBlock);
       return latestBlock;
     });
 };

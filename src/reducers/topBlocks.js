@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { getRpcServer } from '../actions';
+import { getRpcServer, getLatestBlockFulfilled } from '../actions';
 
 const initialState = {
   blockList: [
@@ -38,4 +38,14 @@ const initialState = {
   ],
 };
 
-export default handleActions({}, initialState);
+const deepCopyState = (state) => JSON.parse(JSON.stringify(state));
+
+export default handleActions({
+  [getLatestBlockFulfilled]: (state, {payload}) => {
+    const newState = deepCopyState(state);
+    newState.blockList.map((block) => {
+      if (block.tag === 'lastBlock') block.value = payload.toString();
+    });
+    return newState; 
+  },
+}, initialState);
