@@ -19,7 +19,6 @@ class SearchForm extends Component{
   }
 
   render(){
-    console.log(this.props);
     return (
       <div className="row">
         <form onSubmit={this.submit}>
