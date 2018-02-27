@@ -68,7 +68,7 @@ export const getTransactions = async () => {
   return transactions;
 };
 
-function getBalance(account) {
+const getBalance = account => {
   return web3.eth
     .getBalance(account)
     .then(bal => {
@@ -77,7 +77,7 @@ function getBalance(account) {
       obj["balance"] = web3.utils.fromWei(bal);
       return obj;
     });
-}
+};
 
 export const getBlocks = (maxBlockCount = 3) => {
   // get block count
