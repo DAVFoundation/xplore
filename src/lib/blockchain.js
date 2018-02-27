@@ -68,7 +68,7 @@ export const getTransactions = async () => {
   return transactions;
 };
 
-const getBalance = (account) => {
+const getBalance = account => {
   return web3.eth
     .getBalance(account)
     .then((bal) => {
