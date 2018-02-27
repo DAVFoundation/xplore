@@ -45,7 +45,6 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-devtools-extension": "^2.13.2",
-    "redux-form": "^7.2.3",
     "redux-promise-middleware": "^5.0.0",
     "style-loader": "^0.20.2",
     "url-loader": "^0.6.2",
