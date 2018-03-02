@@ -17,7 +17,7 @@ A lot of our code comes from pull requests sent by the developer community. Here
 - [x] Open the [Xplore GitHub page](https://github.com/DAVFoundation/xplore) and click the ★ Star and then ⑂ Fork buttons.
 - [x] Start a local Ethereum testnet on your machine by installing dav-cli (`npm install -g dav-cli`) and starting it (`dav-cli -s`). If you do not have a local testnet, you won't see any data in Xplore
 - [x] Clone a copy to your local machine with `$ git clone git@github.com:YOUR-GITHUB-USER-NAME/xplore.git`
-- [x] Run `npm install` to install all of its dependencies. If your run Windows and encounter issues, check [Windows installation fix](#windows-installation-fix)
+- [x] Run `npm install` to install all of its dependencies. If you are on Windows and encounter issues during installation, check [Windows installation fix](#windows-installation-fix)
 - [x] Run `npm start` to build the Xplore project and start a local server
 - [x] Visit http://localhost:3333/ to see your local copy of Xplore in action
 - [x] Now, code, code, code.
@@ -28,7 +28,7 @@ A lot of our code comes from pull requests sent by the developer community. Here
 
 ### Windows installation fix
 
-If you are running this project on Windows and your `npm install` failed, you will need to install the following tools:
+If you are running this project on Windows and your `npm install` failed because of the `node-gyp` package, you will need to install the following tools:
 - [x] Install [Python 2.7.3](https://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi). Do not install a newer version (>= 3.0) because those are not supported by `node-gyp`
 - [x] Open a new CMD (Run as Administrator) and run `setx PYTHON C:\Python27\python.exe /m` or your installation path. Check you have the **PYTHON** environment variable set up
 - [x] Install [Visual Studio 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409).
