@@ -17,7 +17,7 @@ A lot of our code comes from pull requests sent by the developer community. Here
 - [x] Open the [Xplore GitHub page](https://github.com/DAVFoundation/xplore) and click the ★ Star and then ⑂ Fork buttons.
 - [x] Start a local Ethereum testnet on your machine by installing dav-cli (`npm install -g dav-cli`) and starting it (`dav-cli -s`). If you do not have a local testnet, you won't see any data in Xplore
 - [x] Clone a copy to your local machine with `$ git clone git@github.com:YOUR-GITHUB-USER-NAME/xplore.git`
-- [x] Run `npm install` to install all of its dependencies
+- [x] Run `npm install` to install all of its dependencies. If your run Windows and encounter issues, check [Windows installation fix](#windows-installation-fix)
 - [x] Run `npm start` to build the Xplore project and start a local server
 - [x] Visit http://localhost:3333/ to see your local copy of Xplore in action
 - [x] Now, code, code, code.
@@ -25,6 +25,16 @@ A lot of our code comes from pull requests sent by the developer community. Here
 - [x] Once you've made sure all your changes work correctly and have been committed, push your local changes back to github with `$ git push -u origin master`
 - [x] Visit your fork on GitHub.com ([https://github.com/YOUR-USER-NAME/xplore](https://github.com/YOUR-USER-NAME/xplore)) and create a pull request for your changes.
 - [x] Makes sure your pull request describes exactly what you changed and if it relates to an open issue, reference that issue (just include the issue number in the title like this: #49)
+
+### Windows installation fix
+
+If you are running this project on Windows and your `npm install` failed, you will need to install the following tools:
+- [x] Install [Python 2.7.3](https://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi). Do not install a newer version (>= 3.0) because those are not supported by `node-gyp`
+- [x] Open a new CMD (Run as Administrator) and run `setx PYTHON C:\Python27\python.exe /m` or your installation path. Check you have the **PYTHON** environment variable set up
+- [x] Install [Visual Studio 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409).
+  * If you already have it, create a new C++ Project and install the **Common Tools for Visual C++** during setup
+- [x] Open a new CMD and run `npm install -g node-gyp`
+- [x] Restart CMD (Run as administrator) and try `npm install` again
 
 #### Important:
 
