@@ -8,7 +8,7 @@ export const truncate = (
   } else {
     var truncated = text.slice(0, leadingCharacterCount);
     truncated += '...';
-    truncated += text.slice(text.length - trailingCharacterCount, text.length);
+    truncated += text.slice(- trailingCharacterCount);
   }
   return truncated;
 };
