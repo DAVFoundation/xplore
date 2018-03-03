@@ -1,15 +1,7 @@
 body{
-  	font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 	font-weight: 300;
-	background: rgba(108,79,222,1);
-	background: -moz-linear-gradient(-45deg, rgba(108,79,222,1) 0%, rgba(115,165,236,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(108,79,222,1)), color-stop(100%, rgba(115,165,236,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(108,79,222,1) 0%, rgba(115,165,236,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(108,79,222,1) 0%, rgba(115,165,236,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(108,79,222,1) 0%, rgba(115,165,236,1) 100%);
-	background: linear-gradient(135deg, rgba(108,79,222,1) 0%, rgba(115,165,236,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c4fde', endColorstr='#73a5ec', GradientType=1 );
-	background-repeat: no-repeat;
+	background: rgba(54,55,64,1);
 }
 .logo img{
 	width: 133px;
