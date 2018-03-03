@@ -3,7 +3,7 @@ import store from '../store';
 import BlocksContainer from '../containers/BlocksContainer.jsx';
 import AccountsContainer from '../containers/AccountsContainer.jsx';
 import SearchFormContainer from '../containers/SearchFormContainer.jsx';
-import TopBlocksContainer from '../containers/TopBlocksContainer.jsx';
+import HeaderSectionsContainer from '../containers/HeaderSectionsContainer.jsx';
 import TransactionsContainer from '../containers/TransactionsContainer.jsx';
 import EventsContainer from '../containers/EventsContainer.jsx';
 import {getBlocks, getAccounts, getTransactions, getEvents} from '../actions';
@@ -34,7 +34,7 @@ class App extends Component {
         <h1>DAV Block Explorer</h1>
 
         <div className="gray-block">
-          <TopBlocksContainer/>
+          <HeaderSectionsContainer/>
           <div className="row">
             <TransactionsContainer/>
             <AccountsContainer/>

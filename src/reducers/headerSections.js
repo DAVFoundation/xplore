@@ -2,7 +2,7 @@ import { handleActions } from 'redux-actions';
 import { getRpcServer } from '../actions';
 
 const initialState = {
-  blockList: [
+  sectionList: [
     {
       title: 'Last Block',
       action: 'getLatestBlock',
