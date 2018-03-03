@@ -71,10 +71,10 @@ export const getTransactions = async () => {
 const getBalance = account => {
   return web3.eth
     .getBalance(account)
-    .then(bal => {
+    .then(balance => {
       let obj = {};
       obj["address"] = account;
-      obj["balance"] = web3.utils.fromWei(bal);
+      obj["balance"] = web3.utils.fromWei(balance);
       return obj;
     });
 };
