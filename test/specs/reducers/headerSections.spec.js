@@ -1,4 +1,4 @@
-import reducer from '../../../src/reducers/topBlocks';
+import reducer from '../../../src/reducers/headerSections';
 
 describe('RPC server reducer', () => {
   describe('When GET_RPC_SERVER action is fired', () => {

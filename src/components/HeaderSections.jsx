@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class TopBlocks extends Component {
+class HeaderSections extends Component {
   constructor(props){
     super(props);
   }
 
   render(){
-    var topList = this.props.blockList.map((block, index) => {
-      return (<BlockItem key={index} action={block.action} title={block.title} classId={block.class} icon={block.icon} value={block.value}/>);
+    var headerList = this.props.sectionList.map((section, index) => {
+      return (<SectionItem key={index} action={section.action} title={section.title} classId={section.class} icon={section.icon} value={section.value}/>);
     });
     return(
       <div className="row">
-        {topList}
+        {headerList}
       </div>
     );
   }
 }
 
-class BlockItem extends Component {
+class SectionItem extends Component {
   constructor(props){
     super(props);
   }
@@ -47,15 +47,15 @@ class BlockItem extends Component {
   }
 }
 
-TopBlocks.propTypes = {
-  blockList: PropTypes.array
+HeaderSections.propTypes = {
+  sectionList: PropTypes.array
 };
 
-BlockItem.propTypes = {
+SectionItem.propTypes = {
   classId: PropTypes.string,
   title: PropTypes.string,
   icon: PropTypes.string,
   value: PropTypes.string
 };
 
-export default TopBlocks;
+export default HeaderSections;
