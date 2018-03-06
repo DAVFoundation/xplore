@@ -1,15 +1,6 @@
 body{
-	font-family: 'Exo 2', sans-serif;
-	font-weight: 300;
-	background: rgb(28, 27, 37);
-	background: -moz-linear-gradient((rgb(28, 27, 37) 0%, rgb(0, 0, 0) 100%));
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgb(28, 27, 37)), color-stop(100%, rgb(0, 0, 0)));
-	background: -webkit-linear-gradient(rgb(28, 27, 37) 0%, rgb(0, 0, 0) 100%);
-	background: -o-linear-gradient(rgb(28, 27, 37) 0%, rgb(0, 0, 0) 100%);
-	background: -ms-linear-gradient(rgb(28, 27, 37) 0%, rgb(0, 0, 0) 100%);
-	/* background: linear-gradient(rgb(0, 0, 0) 0%, rgb(28, 27, 37) 100%); */
-	background: linear-gradient(rgb(28, 27, 37) 0%, rgb(0, 0, 0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1C1B25', endColorstr='#000000', GradientType=1 );
+	background: rgb(54, 55, 64);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363740', endColorstr='#363740', GradientType=1 );
 	background-repeat: no-repeat;
 }
 .logo img{
