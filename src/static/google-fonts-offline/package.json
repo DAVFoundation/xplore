@@ -1,0 +1,62 @@
+{
+  "_from": "google-fonts-offline",
+  "_id": "google-fonts-offline@0.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-69MEPKNjsJUTZx3hHZ1ipW/odtg=",
+  "_location": "/google-fonts-offline",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "google-fonts-offline",
+    "name": "google-fonts-offline",
+    "escapedName": "google-fonts-offline",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/google-fonts-offline/-/google-fonts-offline-0.1.2.tgz",
+  "_shasum": "ebd3043ca363b09513671de11d9d62a56fe876d8",
+  "_spec": "google-fonts-offline",
+  "_where": "C:\\Users\\TharunReddy",
+  "author": {
+    "name": "Paul Makovich",
+    "email": "makovich@great.pm"
+  },
+  "bin": {
+    "goofoffline": "./bin/goofoffline"
+  },
+  "bugs": {
+    "url": "http://github.com/makovich/google-fonts-offline/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Christian Ulbrich",
+      "url": "https://github.com/ChristianUlbrich"
+    }
+  ],
+  "deprecated": false,
+  "description": "Use Google Fonts while you offline or in development.",
+  "homepage": "https://github.com/makovich/google-fonts-offline#readme",
+  "keywords": [
+    "google",
+    "fonts",
+    "font",
+    "offline",
+    "download",
+    "local"
+  ],
+  "license": "CC",
+  "main": "index.js",
+  "name": "google-fonts-offline",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makovich/google-fonts-offline.git"
+  },
+  "version": "0.1.2"
+}
