@@ -28,13 +28,13 @@ A lot of our code comes from pull requests sent by the developer community. Here
 
 ### Windows installation fix
 
-If you are running this project on Windows and your `npm install` failed because of the `node-gyp` package, you will need to install the following tools:
-- [x] Install [Python 2.7.3](https://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi). Do not install a newer version (>= 3.0) because those are not supported by `node-gyp`
-- [x] Open a new CMD (Run as Administrator) and run `setx PYTHON C:\Python27\python.exe /m` or your installation path. Check you have the **PYTHON** environment variable set up
-- [x] Install [Visual Studio 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409).
-  * If you already have it, create a new C++ Project and install the **Common Tools for Visual C++** during setup
-- [x] Open a new CMD and run `npm install -g node-gyp`
-- [x] Restart CMD (Run as administrator) and try `npm install` again
+If you are building `xplore` on Windows and your `npm install` failed because of the `node-gyp` package, follow the below steps:
+
+- [x] Install [Python 2.7.3](https://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi). `node-gyp` dosen't work with any newer versions of python. So, make sure you have the specific version of python. The status can be tracked here https://github.com/nodejs/node-gyp/issues/193
+- [x] Open a new `CMD` as administrator and run `setx PYTHON C:\Python27\python.exe /m` or your python installation path. Check you have the **PYTHON** environment variable set up by running `python`.
+- [x] Install [Visual Studio 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409). If you already have it, create a new C++ Project and install the **Common Tools for Visual C++** during setup.
+- [x] Then open a new `CMD` and run `npm install -g node-gyp`.
+- [x] Restart `CMD` and try `npm install` again
 
 #### Important:
 
