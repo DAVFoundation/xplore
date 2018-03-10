@@ -28,7 +28,7 @@ A lot of our code comes from pull requests sent by the developer community. Here
 
 ### Windows installation fix
 
-If you are building `xplore` on Windows and your `npm install` failed because of the `node-gyp` package, follow the below steps:
+If you are building `xplore` on Windows and your `npm install` failed because of the `node-gyp` package, follow these steps:
 
 - [x] Install [Python 2.7.3](https://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi). `node-gyp` dosen't work with any newer versions of python. So, make sure you have the specific version of python. The status can be tracked here https://github.com/nodejs/node-gyp/issues/193
 - [x] Open a new `CMD` as administrator and run `setx PYTHON C:\Python27\python.exe /m` or your python installation path. Check you have the **PYTHON** environment variable set up by running `python`.
