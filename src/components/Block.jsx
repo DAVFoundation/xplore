@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { truncate } from "../lib/utils";
+import config from '../config/index'; 
 
 class Block extends Component {
   constructor(props){
@@ -8,6 +9,7 @@ class Block extends Component {
   }
   render(){
     const dateOptions = { hour: '2-digit', minute: '2-digit', second:'2-digit', hour12: false };
+    const locale = config('locale');
     return(
       <div className="white-container transaction-item">
         <div className="row">
@@ -20,7 +22,7 @@ class Block extends Component {
           <div className="col-xs-12">
             <p className="hash">Block: <span className="blue">{this.props.block.number}</span></p>
             <p>Transactions: <span className="blue">{this.props.block.transactions.length}</span></p>
-            <p>Time: <span className="blue">{this.props.date.toLocaleString('en-US', dateOptions)}</span></p>
+            <p>Time: <span className="blue">{this.props.date.toLocaleString(locale, dateOptions)}</span></p>
           </div>
         </div>
       </div>
