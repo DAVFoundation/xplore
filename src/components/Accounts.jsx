@@ -27,7 +27,7 @@ class Accounts extends Component {
             return (
               <AccountBalance key={index}
                 address={account.address}
-                balance={parseFloat(account.balance).toFixed(2)} />
+                balance={parseFloat(account.balance).toFixed(5)} />
             );
           })}
         </div>
