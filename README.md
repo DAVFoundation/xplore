@@ -4,3 +4,5 @@
 
 
 A block explorer for local Ethereum testnets
+
+![readme_screenshot](src/images/readme_screenshot.png)
