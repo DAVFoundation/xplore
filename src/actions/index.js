@@ -5,10 +5,10 @@ import {
   getAccounts as getAccountsCall,
   getTransactions as getTransactionsCall,
   getEvents as getEventsCall,
-  getLatestBlock as getLatestBlockCall,
+  getLatestBlockNumber as getLatestBlockCall,
   getTransactionCount as getTransactionCountCall,
   getMiningStatus as getMiningStatusCall,
-  getRpcServer as getRpcServerCall,
+  getRpcServer as getRpcServerCall
 } from '../lib/blockchain';
 
 export const getEvents = createAction('GET_EVENTS', getEventsCall);
@@ -47,7 +47,7 @@ export const getTransactionCount = createAction(
   getTransactionCountCall,
 );
 
-export const getLatestBlock = createAction(
+export const getLatestBlockNumber = createAction(
   'GET_LATEST_BLOCK',
   getLatestBlockCall,
 );
