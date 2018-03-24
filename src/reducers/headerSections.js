@@ -5,7 +5,7 @@ const initialState = {
   sectionList: [
     {
       title: 'Last Block',
-      action: 'getLatestBlock',
+      action: 'getLatestBlockNumber',
       class: 'last-block',
       icon: 'last-block.png',
       tag: 'lastBlock',
