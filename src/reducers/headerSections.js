@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { getRpcServer } from '../actions';
+import { getRpcServer, getLatestTransactionFulfilled } from '../actions';
 
 const initialState = {
   sectionList: [
@@ -38,4 +38,21 @@ const initialState = {
   ],
 };
 
-export default handleActions({}, initialState);
+const deepCopyState = (state) => JSON.parse(JSON.stringify(state));
+
+export default handleActions({
+  [getLatestTransactionFulfilled]: (state, {payload}) => {
+    const newState = deepCopyState(state);
+    newState.sectionList.map((section) => {
+      if (section.tag === 'transactions') {
+        for (let key in payload) {
+          if (key === 'ethValue' || key === 'from') {
+            section.value += `${key}: ${payload[key]}
+            `;
+          }
+        }
+      }
+    });
+    return newState; 
+  },
+}, initialState);

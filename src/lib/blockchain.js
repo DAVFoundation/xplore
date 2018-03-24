@@ -70,6 +70,17 @@ export const getTransactions = async () => {
   return transactions;
 };
 
+export const getLatestTransaction = async () => {
+  const latestBlockNumber = await getLatestBlockNumber();
+  const latestBlock = await web3.eth.getBlock(latestBlockNumber);
+  const latestTransactionIndex = latestBlock.transactions.length - 1;
+  const latestTransactionHash = latestBlock.transactions[latestTransactionIndex];
+  const tx = await web3.eth.getTransaction(latestTransactionHash);
+  tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
+  console.log(tx);
+  return tx;
+};
+
 const getBalance = account => {
   return web3.eth.getBalance(account).then(balance => {
     let obj = {};

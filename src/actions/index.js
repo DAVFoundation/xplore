@@ -4,6 +4,7 @@ import {
   getBlocks as getBlocksCall,
   getAccounts as getAccountsCall,
   getTransactions as getTransactionsCall,
+  getLatestTransaction as getLatestTransactionCall,
   getEvents as getEventsCall,
   getLatestBlockNumber as getLatestBlockCall,
   getTransactionCount as getTransactionCountCall,
@@ -34,6 +35,10 @@ export const getTransactions = createAction(
 export const getTransactionsFulfilled = createAction(
   'GET_TRANSACTIONS_FULFILLED',
 );
+
+export const getLatestTransaction = createAction('GET_LATEST_TRANSACTION', getLatestTransactionCall);
+
+export const getLatestTransactionFulfilled = createAction('GET_LATEST_TRANSACTION_FULFILLED');
 
 export const submitSearchForm = createAction('SUBMIT_SEARCH_FORM');
 
