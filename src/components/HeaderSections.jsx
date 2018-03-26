@@ -48,10 +48,6 @@ class SectionItem extends Component {
       </div>
     );
   }
-
-  newMethod() {
-    return 10;
-  }
 }
 
 HeaderSections.propTypes = {

@@ -1,5 +1,6 @@
 import { handleActions } from 'redux-actions';
 import { getRpcServer, getLatestTransactionFulfilled } from '../actions';
+import { deepCopyState } from '../lib/utils';
 
 const initialState = {
   sectionList: [
@@ -37,8 +38,6 @@ const initialState = {
     },
   ],
 };
-
-const deepCopyState = (state) => JSON.parse(JSON.stringify(state));
 
 export default handleActions({
   [getLatestTransactionFulfilled]: (state, {payload}) => {
