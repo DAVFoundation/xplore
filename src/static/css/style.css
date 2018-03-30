@@ -94,14 +94,8 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463cd7', endColorstr='#4a64e5', GradientType=1 );
 }
 .transactions{
-	background: rgba(17,210,85,1);
-	background: -moz-linear-gradient(-45deg, rgba(17,210,85,1) 0%, rgba(38,228,154,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(17,210,85,1)), color-stop(100%, rgba(38,228,154,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(17,210,85,1) 0%, rgba(38,228,154,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(17,210,85,1) 0%, rgba(38,228,154,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(17,210,85,1) 0%, rgba(38,228,154,1) 100%);
-	background: linear-gradient(135deg, rgba(17,210,85,1) 0%, rgba(38,228,154,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f9c95', endColorstr='#19daa3', GradientType=1 );
+    border: 1px solid #f06f56;
+    color: #363840;
 }
 .mining-status{
 	background: rgba(253,176,58,1);
@@ -119,7 +113,7 @@ body{
 .transactions h4,
 .mining-status h4{
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 700;
 }
 .last-block h3,
 .rpc-server h3,
