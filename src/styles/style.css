@@ -84,14 +84,8 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e62e0', endColorstr='#1fa5ed', GradientType=1 );
 	}
 .rpc-server{
-	background: rgba(70,60,215,1);
-	background: -moz-linear-gradient(-45deg, rgba(70,60,215,1) 0%, rgba(74,100,229,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(70,60,215,1)), color-stop(100%, rgba(74,100,229,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(70,60,215,1) 0%, rgba(74,100,229,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(70,60,215,1) 0%, rgba(74,100,229,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(70,60,215,1) 0%, rgba(74,100,229,1) 100%);
-	background: linear-gradient(135deg, rgba(70,60,215,1) 0%, rgba(74,100,229,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463cd7', endColorstr='#4a64e5', GradientType=1 );
+	border:1px solid #f06f56;
+	color: #363840;
 }
 .mining-status{
 	background: rgba(129,82,232,1);
@@ -105,7 +99,9 @@ body{
 }
 
 .last-block h4,
-.rpc-server h4,
+.rpc-server h4{
+	font-weight: bold;
+}
 .transactions h4,
 .mining-status h4{
 	font-size: 20px;
@@ -133,7 +129,8 @@ body{
 }
 .rpc-server h3{
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: 500 bold;
+	text-decoration: underline;
 	margin-top: 40px;
 }
 .transactions img{
