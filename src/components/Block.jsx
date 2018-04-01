@@ -10,11 +10,13 @@ class Block extends Component {
   render(){
     const dateOptions = { hour: '2-digit', minute: '2-digit', second:'2-digit', hour12: false };
     const locale = config('locale');
+    const characterCount = 20;
     return(
       <div className="white-container transaction-item">
         <div className="row">
           <div className="col-xs-6 text-left">
-            <p className="header-custom"><strong>{this.props.block.ethValue}</strong> {truncate(this.props.block.hash, 20, 20)}</p>
+            <p className="header-custom"><strong>{this.props.block.ethValue}</strong> 
+              {truncate(this.props.block.hash, characterCount, characterCount)}</p>
           </div>
         </div>
         <div className="header-separator"></div>
