@@ -53,7 +53,11 @@ body{
 }
 .xplorer h1{
 	text-align: center;
+<<<<<<< HEAD
 	color: #f96c53;
+=======
+	color: #ff6d37;
+>>>>>>> e921b86616155917031c3244138e37e8bab0ebde
 	margin: 40px 0 30px;
 	font-weight: 700;
 }
