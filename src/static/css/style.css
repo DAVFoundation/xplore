@@ -230,11 +230,11 @@ h3.block-title{
 
 .transaction-item:before {
   content: "";
-  border: 2px solid #26dca9;
+  border: none;
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #f3f4f9;
+  background: #ff6d37;
   position: absolute;
   top: 30px;
   left: -35px;
