@@ -13,8 +13,7 @@ class AccountBalance extends Component {
         </div>
         <div className="col-xs-6 text-right">
           <p>
-            <strong>{this.props.balance}</strong>
-            ETH
+            <strong>{this.props.balance}</strong> ETH
           </p>
         </div>
       </div>  
