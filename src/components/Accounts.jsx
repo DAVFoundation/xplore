@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AccountBalance from './AccountBalance.jsx';
+import config from '../config';
 
 class Accounts extends Component {
   constructor(props){
@@ -8,7 +9,7 @@ class Accounts extends Component {
   }
 
   render(){
-
+    const decimalCount = config('account_balance_decimal_count');
     return(
       <div className="col-sm-6">
         <h3 className="block-title">Accounts</h3>
@@ -27,7 +28,7 @@ class Accounts extends Component {
             return (
               <AccountBalance key={index}
                 address={account.address}
-                balance={parseFloat(account.balance).toFixed(5)} />
+                balance={parseFloat(account.balance).toFixed(decimalCount)} />
             );
           })}
         </div>

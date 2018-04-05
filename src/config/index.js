@@ -4,6 +4,7 @@ const config = {
   default_url: 'http://localhost',
   max_events_count: 10,
   locale: 'en-US',
+  account_balance_decimal_count: 5,
 };
 
 export default key => {
