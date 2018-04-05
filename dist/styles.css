@@ -14,7 +14,7 @@ body{
 	width: 100%;
 	display: block;
 	border: none;
-	background: #f76b52;
+	background: #ff6d37;
 	color: #FFF;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
@@ -24,7 +24,7 @@ body{
 	margin-top: -3px;
 }
 .xplorer input[type=text]{
-	border: 1px solid #FFF;
+	border: 1px solid #484a51;
 	border-radius: 5px;
 	background: transparent;
 	color: #FFF;
@@ -53,7 +53,7 @@ body{
 }
 .xplorer h1{
 	text-align: center;
-	color: #FFF;
+	color: #f96c53;
 	margin: 40px 0 30px;
 	font-weight: 700;
 }
@@ -74,37 +74,25 @@ body{
 	height: 110px;
 }
 .last-block{
-	background: rgba(247,92,74,1);
-	background: -moz-linear-gradient(-45deg, rgba(247,92,74,1) 0%, rgba(245,129,104,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(247,92,74,1)), color-stop(100%, rgba(245,129,104,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(247,92,74,1) 0%, rgba(245,129,104,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(247,92,74,1) 0%, rgba(245,129,104,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(247,92,74,1) 0%, rgba(245,129,104,1) 100%);
-	background: linear-gradient(135deg, rgba(247,92,74,1) 0%, rgba(245,129,104,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e62e0', endColorstr='#1fa5ed', GradientType=1 );
-	}
+	border: 1px solid #f06f56;
+  color: #363840;
+}
 .rpc-server{
 	border:1px solid #f06f56;
-	color: #000000;
+	color: #363840;
 }
 .transactions{
-	background: rgba(15,156,149,1);
-	background: -moz-linear-gradient(-45deg, rgba(15,156,149,1) 0%, rgba(25,218,163,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(15,156,149,1)), color-stop(100%, rgba(25,218,163,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(15,156,149,1) 0%, rgba(25,218,163,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(15,156,149,1) 0%, rgba(25,218,163,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(15,156,149,1) 0%, rgba(25,218,163,1) 100%);
-	background: linear-gradient(135deg, rgba(15,156,149,1) 0%, rgba(25,218,163,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f9c95', endColorstr='#19daa3', GradientType=1 );
+    border: 1px solid #f06f56;
+    color: #363840;
 }
 .mining-status{
-	background: rgba(129,82,232,1);
-	background: -moz-linear-gradient(-45deg, rgba(129,82,232,1) 0%, rgba(137,137,247,1) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(129,82,232,1)), color-stop(100%, rgba(137,137,247,1)));
-	background: -webkit-linear-gradient(-45deg, rgba(129,82,232,1) 0%, rgba(137,137,247,1) 100%);
-	background: -o-linear-gradient(-45deg, rgba(129,82,232,1) 0%, rgba(137,137,247,1) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(129,82,232,1) 0%, rgba(137,137,247,1) 100%);
-	background: linear-gradient(135deg, rgba(129,82,232,1) 0%, rgba(137,137,247,1) 100%);
+	background: rgba(253,176,58,1);
+	background: -moz-linear-gradient(-45deg, rgba(253,176,58,1) 0%, rgba(244,207,77,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(253,176,58,1)), color-stop(100%, rgba(244,207,77,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(253,176,58,1) 0%, rgba(244,207,77,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(253,176,58,1) 0%, rgba(244,207,77,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(253,176,58,1) 0%, rgba(244,207,77,1) 100%);
+	background: linear-gradient(135deg, rgba(253,176,58,1) 0%, rgba(244,207,77,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8152e8', endColorstr='#8989f7', GradientType=1 );
 }
 
@@ -115,7 +103,7 @@ body{
 .transactions h4,
 .mining-status h4{
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 700;
 }
 .last-block h3,
 .rpc-server h3,
@@ -131,7 +119,7 @@ body{
 	width: 80%;
 }
 .last-block img{
-	margin-top: 20px;
+	margin-top: 14px;
 	width: 100%;
 }
 .rpc-server img{
@@ -242,11 +230,10 @@ h3.block-title{
 
 .transaction-item:before {
   content: "";
-  border: 2px solid #26dca9;
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #f3f4f9;
+  background: #ff6d37;
   position: absolute;
   top: 30px;
   left: -35px;
