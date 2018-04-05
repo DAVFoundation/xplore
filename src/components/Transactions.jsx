@@ -9,16 +9,17 @@ class Transactions extends Component{
 
   render(){
     let transactions = this.props.transactions.map((transaction, index) => {
+      const characterCount = 6;
       return (
         <div className="row" key={index}>
           <div className="col-xs-3 text-center">
-            <p>{truncate(transaction.hash, 6, 6)}</p>
+            <p>{truncate(transaction.hash, characterCount, characterCount)}</p>
           </div>
           <div className="col-xs-3 text-center">
-            <p>{truncate(transaction.from, 6, 6)}</p>
+            <p>{truncate(transaction.from, characterCount, characterCount)}</p>
           </div>
           <div className="col-xs-3 text-center">
-            <p>{truncate(transaction.to, 6, 6)}</p>
+            <p>{truncate(transaction.to, characterCount, characterCount)}</p>
           </div>
           <div className="col-xs-3 text-center">
             <p>{transaction.blockNumber}</p>

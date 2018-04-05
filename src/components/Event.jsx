@@ -7,13 +7,15 @@ class Event extends Component{
     super(props);
   }
   render(){
+    const characterCount = 8;
     return(
       <div className="row">
         <div className="col-xs-3 text-left">
           <p>{event.event}</p>
         </div>
         <div className="col-xs-6 text-center">
-          <p>{event.contractName} (<span className="address-number">{truncate(event.address, 8, 8)}</span>)</p>
+          <p>{event.contractName} (<span className="address-number">
+            {truncate(event.address, characterCount, characterCount)}</span>)</p>
         </div>
         <div className="col-xs-3 text-right">
           <p>{event.blockNumber}</p>
