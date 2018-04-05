@@ -20,7 +20,9 @@ export const getEvents = async () => {
     const ContractInstance = new web3.eth.Contract(abi, contractAddress);
     const unfilteredEvents = await ContractInstance.getPastEvents('allEvents');
     const eventsToWatch = eventContracts[contractName].eventsToWatch;
-    const filteredEvents = unfilteredEvents.filter(event => eventsToWatch.includes(event.event));
+    const filteredEvents = unfilteredEvents.filter(event =>
+      eventsToWatch.includes(event.event),
+    );
     const events = filteredEvents.map(event => {
       event.contractName = contractName;
       return event;
@@ -69,14 +71,12 @@ export const getTransactions = async () => {
 };
 
 const getBalance = account => {
-  return web3.eth
-    .getBalance(account)
-    .then(balance => {
-      let obj = {};
-      obj["address"] = account;
-      obj["balance"] = web3.utils.fromWei(balance);
-      return obj;
-    });
+  return web3.eth.getBalance(account).then(balance => {
+    let obj = {};
+    obj['address'] = account;
+    obj['balance'] = web3.utils.fromWei(balance);
+    return obj;
+  });
 };
 
 export const getBlocks = (maxBlockCount = 3) => {
@@ -99,30 +99,24 @@ export const getBlocks = (maxBlockCount = 3) => {
 };
 
 export const getLatestBlock = () => {
-  web3.eth
-    .getBlockNumber()
-    .then(latestBlock => {
-      console.log(latestBlock);
-      return latestBlock;
-    });
+  web3.eth.getBlockNumber().then(latestBlock => {
+    console.log(latestBlock);
+    return latestBlock;
+  });
 };
 
-export const getTransactionCount = (block) => {
-  web3.eth
-    .getBlockTransactionCount(block)
-    .then(count => {
-      console.log(count);
-      return count;
-    });
+export const getTransactionCount = block => {
+  web3.eth.getBlockTransactionCount(block).then(count => {
+    console.log(count);
+    return count;
+  });
 };
 
 export const getMiningStatus = () => {
-  web3.eth
-    .isMining()
-    .then(status => {
-      console.log(status);
-      return status;
-    });
+  web3.eth.isMining().then(status => {
+    console.log(status);
+    return status;
+  });
 };
 
 export const search = query => {

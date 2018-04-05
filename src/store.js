@@ -4,7 +4,10 @@ import promiseMiddleware from 'redux-promise-middleware';
 import reducers from './reducers';
 
 const initStore = () => {
-  const store = createStore(reducers, composeWithDevTools(applyMiddleware(promiseMiddleware())));
+  const store = createStore(
+    reducers,
+    composeWithDevTools(applyMiddleware(promiseMiddleware())),
+  );
 
   return store;
 };
