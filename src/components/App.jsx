@@ -36,11 +36,11 @@ class App extends Component {
         <div className="gray-block">
           <HeaderSectionsContainer/>
           <div className="row">
-            <TransactionsContainer/>
+            <BlocksContainer/>
             <AccountsContainer/>
           </div>
           <div className="row">
-            <BlocksContainer/>
+            <TransactionsContainer/>
             <EventsContainer/>
           </div>
         </div>
