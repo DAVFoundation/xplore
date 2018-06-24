@@ -38,19 +38,19 @@
     "jest": "^23.1.0",
     "jest-cli": "^23.1.0",
     "prettier": "^1.13.5",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-actions": "^2.4.0",
-    "redux-devtools-extension": "^2.13.2",
+    "redux-devtools-extension": "^2.13.5",
     "redux-promise-middleware": "^5.1.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "web3": "^1.0.0-beta.34",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.3"
   }
 }
