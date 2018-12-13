@@ -128,22 +128,18 @@ export const search = query => {
   }
 
   switch (type) {
-  case 'tx':
-    web3.eth
-      .getTransaction(query)
-      .then(tx => {
+    case 'tx':
+      web3.eth.getTransaction(query).then(tx => {
         console.log(tx);
       });
-    break;
-  case 'block':
-    web3.eth
-      .getBlock(parseInt(query))
-      .then(block => {
+      break;
+    case 'block':
+      web3.eth.getBlock(parseInt(query)).then(block => {
         console.log(block);
       });
-    break;
-  case 'address':
-    break;
+      break;
+    case 'address':
+      break;
   }
 };
 
