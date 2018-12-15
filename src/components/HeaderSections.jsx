@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { Textfit } from 'react-textfit';
 
 class HeaderSections extends Component {
   constructor(props){
@@ -36,9 +35,7 @@ class SectionItem extends Component {
           <div className="row">
             <div className="col-xs-8">
               <h4>{this.props.title}</h4>
-              <Textfit mode="multi" min={10}>
-                {this.props.value}
-              </Textfit>
+              {this.props.value}
             </div>
             <div className="col-xs-4">
               <img src={imgPath}/>
