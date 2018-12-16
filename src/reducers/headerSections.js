@@ -39,25 +39,28 @@ const initialState = {
   ],
 };
 
-export default handleActions({
-  [getLatestTransactionFulfilled]: (state, {payload}) => {
-    const newState = deepCopyState(state);
-    newState.sectionList.map((section) => {
-      if (section.tag === 'transactions') {
-        for (let key in payload) {
-          if (key === 'ethValue') {
-            const newkey = key.charAt(0).toUpperCase() + key.substr(1);
-            section.value += `${newkey}: ${payload[key]}
+export default handleActions(
+  {
+    [getLatestTransactionFulfilled]: (state, { payload }) => {
+      const newState = deepCopyState(state);
+      newState.sectionList.map(section => {
+        if (section.tag === 'transactions') {
+          for (let key in payload) {
+            if (key === 'ethValue') {
+              const newkey = key.charAt(0).toUpperCase() + key.substr(1);
+              section.value += `${newkey}: ${payload[key]}
             `;
-          }
-          if (key === 'from') {
-            const newkey = key.charAt(0).toUpperCase() + key.substr(1);
-            section.value += `${newkey}: ${payload[key].substring(0,12)}...\
+            }
+            if (key === 'from') {
+              const newkey = key.charAt(0).toUpperCase() + key.substr(1);
+              section.value += `${newkey}: ${payload[key].substring(0, 12)}...\
             `;
+            }
           }
         }
-      }
-    });
-    return newState; 
+      });
+      return newState;
+    },
   },
-}, initialState);
+  initialState,
+);

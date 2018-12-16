@@ -9,7 +9,7 @@ import {
   getLatestBlockNumber as getLatestBlockCall,
   getTransactionCount as getTransactionCountCall,
   getMiningStatus as getMiningStatusCall,
-  getRpcServer as getRpcServerCall
+  getRpcServer as getRpcServerCall,
 } from '../lib/blockchain';
 
 export const getEvents = createAction('GET_EVENTS', getEventsCall);
@@ -36,9 +36,14 @@ export const getTransactionsFulfilled = createAction(
   'GET_TRANSACTIONS_FULFILLED',
 );
 
-export const getLatestTransaction = createAction('GET_LATEST_TRANSACTION', getLatestTransactionCall);
+export const getLatestTransaction = createAction(
+  'GET_LATEST_TRANSACTION',
+  getLatestTransactionCall,
+);
 
-export const getLatestTransactionFulfilled = createAction('GET_LATEST_TRANSACTION_FULFILLED');
+export const getLatestTransactionFulfilled = createAction(
+  'GET_LATEST_TRANSACTION_FULFILLED',
+);
 
 export const submitSearchForm = createAction('SUBMIT_SEARCH_FORM');
 
