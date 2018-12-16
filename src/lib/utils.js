@@ -12,3 +12,6 @@ export const truncate = (
   }
   return truncated;
 };
+
+export const deepCopyState = (state) => JSON.parse(JSON.stringify(state));
+
