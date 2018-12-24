@@ -63,8 +63,8 @@ export default handleActions(
     },
     [getLatestBlockFulfilled]: (state, {payload}) => {
       const newState = deepCopyState(state);
-      newState.blockList.map((block) => {
-        if (block.tag === 'lastBlock') block.value = payload.toString();
+      newState.sectionList.map((section) => {
+        if (section.tag === 'lastBlock') section.value = payload.toString();
       });
       return newState; 
     },
