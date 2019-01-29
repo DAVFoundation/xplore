@@ -2,13 +2,19 @@ import { combineReducers } from 'redux';
 import accounts from './accounts';
 import transactions from './transactions';
 import blocks from './blocks';
-import headerSections from './headerSections';
+import headerSectionLastBlock from './headerSectionLastBlock';
+import headerSectionMiningStatus from './headerSectionMiningStatus';
+import headerSectionRPCServer from './headerSectionRPCServer';
+import headerSectionTransactions from './headerSectionTransactions';
 import events from './events';
 
 export default combineReducers({
   accounts,
   transactions,
   blocks,
-  headerSections,
+  headerSectionLastBlock,
+  headerSectionTransactions,
+  headerSectionRPCServer,
+  headerSectionMiningStatus,
   events,
 });
