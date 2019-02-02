@@ -35,7 +35,7 @@
     "eslint-plugin-react": "^7.9.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^23.6.0",
+    "jest": "^23.1.0",
     "jest-cli": "^23.1.0",
     "prettier": "^1.13.5",
     "react": "^16.4.1",
@@ -51,6 +51,6 @@
     "web3": "^1.0.0-beta.34",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.3"
   }
 }
