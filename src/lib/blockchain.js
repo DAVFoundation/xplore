@@ -70,6 +70,18 @@ export const getTransactions = async () => {
   return transactions;
 };
 
+export const getLatestTransaction = async () => {
+  const latestBlockNumber = await getLatestBlockNumber();
+  const latestBlock = await web3.eth.getBlock(latestBlockNumber);
+  const latestTransactionIndex = latestBlock.transactions.length - 1;
+  const latestTransactionHash =
+    latestBlock.transactions[latestTransactionIndex];
+  const tx = await web3.eth.getTransaction(latestTransactionHash);
+  tx.ethValue = web3.utils.fromWei(tx.value, 'ether');
+  console.log(tx);
+  return tx;
+};
+
 const getBalance = account => {
   return web3.eth.getBalance(account).then(balance => {
     let obj = {};
@@ -98,9 +110,8 @@ export const getBlocks = (maxBlockCount = 3) => {
     });
 };
 
-export const getLatestBlock = () => {
-  web3.eth.getBlockNumber().then(latestBlock => {
-    console.log(latestBlock);
+export const getLatestBlockNumber = () => {
+  return web3.eth.getBlockNumber().then(latestBlock => {
     return latestBlock;
   });
 };
@@ -129,18 +140,14 @@ export const search = query => {
 
   switch (type) {
   case 'tx':
-    web3.eth
-      .getTransaction(query)
-      .then(tx => {
-        console.log(tx);
-      });
+    web3.eth.getTransaction(query).then(tx => {
+      console.log(tx);
+    });
     break;
   case 'block':
-    web3.eth
-      .getBlock(parseInt(query))
-      .then(block => {
-        console.log(block);
-      });
+    web3.eth.getBlock(parseInt(query)).then(block => {
+      console.log(block);
+    });
     break;
   case 'address':
     break;

@@ -113,11 +113,11 @@ body{
 	width: 80%;
 }
 .last-block img{
-	margin-top: 14px;
+	margin-top: 10px;
 	width: 100%;
 }
 .rpc-server img{
-	margin-top: 18px;
+	margin-top: 12px;
 }
 .rpc-server h3{
 	font-size: 15px;
@@ -126,7 +126,7 @@ body{
 	margin-top: 40px;
 }
 .transactions img{
-	margin-top: 24px;
+	margin-top: 12px;
 }
 .mining-status h3{
 	font-size: 20px;
@@ -134,7 +134,7 @@ body{
 	margin-top: 40px;
 }
 .mining-status img{
-	margin-top: 34px;
+	margin-top: 20px;
 	width: 100%;
 }
 .white-container{

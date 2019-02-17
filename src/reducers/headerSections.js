@@ -1,11 +1,12 @@
 import { handleActions } from 'redux-actions';
-import { getRpcServer } from '../actions';
+import { getRpcServer, getLatestTransactionFulfilled, getLatestBlockFulfilled} from '../actions';
+import { deepCopyState } from '../lib/utils';
 
 const initialState = {
   sectionList: [
     {
       title: 'Last Block',
-      action: 'getLatestBlock',
+      action: 'getLatestBlockNumber',
       class: 'last-block',
       icon: 'last-block.png',
       tag: 'lastBlock',
@@ -38,4 +39,36 @@ const initialState = {
   ],
 };
 
-export default handleActions({}, initialState);
+export default handleActions(
+  {
+    [getLatestTransactionFulfilled]: (state, { payload }) => {
+      const newState = deepCopyState(state);
+      newState.sectionList.map(section => {
+        if (section.tag === 'transactions') {
+          for (let key in payload) {
+            if (key === 'ethValue') {
+              const newkey = key.charAt(0).toUpperCase() + key.substr(1);
+              section.value += `${newkey}: ${payload[key]}
+            `;
+            }
+            if (key === 'from') {
+              const newkey = key.charAt(0).toUpperCase() + key.substr(1);
+              section.value += `${newkey}: ${payload[key].substring(0, 12)}...\
+            `;
+            }
+          }
+        }
+      });
+      return newState;
+    },
+    [getLatestBlockFulfilled]: (state, {payload}) => {
+      const newState = deepCopyState(state);
+      newState.sectionList.map((section) => {
+        if (section.tag === 'lastBlock') section.value = payload.toString();
+      });
+      return newState; 
+    },
+  },
+  initialState,
+);
+

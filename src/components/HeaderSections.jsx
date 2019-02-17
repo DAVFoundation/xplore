@@ -35,7 +35,7 @@ class SectionItem extends Component {
           <div className="row">
             <div className="col-xs-8">
               <h4>{this.props.title}</h4>
-              <h3>{this.props.value}</h3>
+              {this.props.value}
             </div>
             <div className="col-xs-4">
               <img src={imgPath}/>
