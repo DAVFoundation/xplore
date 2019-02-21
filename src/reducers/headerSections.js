@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { getRpcServer, getLatestTransactionFulfilled, getLatestBlockFulfilled} from '../actions';
+import { getRpcServer, getLatestTransactionFulfilled, getLatestBlockFulfilled, getMiningStatus} from '../actions';
 import { deepCopyState } from '../lib/utils';
 
 const initialState = {
@@ -61,14 +61,20 @@ export default handleActions(
       });
       return newState;
     },
+    [getMiningStatus]: (state, {payload}) => {
+      const newState = deepCopyState(state);
+      newState.sectionList.map((section) => {
+        if (section.tag === 'miningStatus') section.value = payload.toString();
+      });
+      return newState; 
+    },
     [getLatestBlockFulfilled]: (state, {payload}) => {
       const newState = deepCopyState(state);
       newState.sectionList.map((section) => {
         if (section.tag === 'lastBlock') section.value = payload.toString();
       });
-      return newState; 
+      return newState;
     },
   },
   initialState,
 );
-
