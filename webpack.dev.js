@@ -26,4 +26,5 @@ module.exports = merge(getCommon(process.env.NODE_ENV), {
       },
     }),
   ],
+ },
 });
