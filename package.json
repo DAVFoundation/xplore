@@ -19,6 +19,11 @@
     "test": "jest",
     "test:watch": "npm test -- --watch --watchAll"
   },
+  "dependencies": {
+    "acorn": "^6.1.1",
+    "ajv": "^6.10.0",
+    "ajv-keywords": "^3.4.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^24.1.0",
@@ -30,15 +35,15 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.1",
     "eslint-config-google": "^0.12.0",
-    "eslint-loader": "^2.0.0",
+    "eslint-loader": "^2.1.2",
     "eslint-plugin-react": "^7.12.4",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.1.0",
     "jest-cli": "^24.1.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "prettier": "^1.13.5",
+    "prettier": "^1.16.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -53,10 +58,5 @@
     "webpack": "^4.29.5",
     "webpack-dev-server": "^3.2.0",
     "webpack-merge": "^4.1.3"
-  },
-  "dependencies": {
-    "acorn": "^6.1.0",
-    "ajv": "^6.9.2",
-    "ajv-keywords": "^3.4.0"
   }
 }
