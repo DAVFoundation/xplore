@@ -10,8 +10,4 @@ const initialState = {
   value: getRpcServer().payload,
 };
 
-export default handleActions(
-  {},
-  initialState,
-);
-
+export default handleActions({}, initialState);
